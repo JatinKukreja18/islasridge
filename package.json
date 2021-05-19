@@ -1,5 +1,6 @@
 {
   "name": "gatsby-getting-started-tutorial",
+  "homepage" : "https://jatinkukreja18.github.io/islasridge/",
   "description": "A simple tutorial to get started with Prismic & Gatsby.js",
   "version": "0.1.0",
   "dependencies": {

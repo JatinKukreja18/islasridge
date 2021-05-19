@@ -27,7 +27,7 @@ const Homepage = ({data}) => {
   }
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Splash" />
       <SplashBanner bannerContent={splashBannerContent} />
     </>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
-import Newsletter from './Newsletter'
+import Newsletter from '../components/Newsletter/index';
 
 
 const SplashBanner = ({bannerContent}) => (
