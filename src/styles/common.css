@@ -2,6 +2,11 @@
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+/* <link rel="stylesheet" href="https://use.typekit.net/jqs8oav.css"> */
+@font-face {
+  font-family: 'Gitan';
+  src: local('Gitan'), url(https://use.typekit.net/jqs8oav.css) format('truetype');
+}
 ::selection {
   background: #FFF7C7; /* WebKit/Blink Browsers */
 }
@@ -15,7 +20,7 @@
 body {
   /* padding: 20px; */
   color: #72767b;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Gitan', sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing : 0.4;
@@ -33,7 +38,7 @@ p a {
   text-decoration: underline;
 }
 h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: gitan-latin, sans-serif;
 }
 h1 {
   font-family: 'Amiri', Serif; 

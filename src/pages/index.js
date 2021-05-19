@@ -1,22 +1,22 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import HomepageBanner from '../components/HomepageBanner'
+// import HomepageBanner from '../components/HomepageBanner'
 import SplashBanner from '../components/SplashBanner'
-import MainContent from '../components/MainContent'
+// import MainContent from '../components/MainContent'
 
 const Homepage = ({data}) => {
   console.log(data);
   if (!data) return null
-  const document = data.allPrismicHomepage.edges[0].node.data
+  // const document = data.allPrismicHomepage.edges[0].node.data
   const splashDocument = data.allPrismicSplash.edges[0].node.data
-  const bannerContent = {
-    title: document.banner_title,
-    description: document.banner_description,
-    link: document.banner_link,
-    linkLabel: document.banner_link_label,
-    background: document.banner_background,
-  }
+  // const bannerContent = {
+  //   title: document.banner_title,
+  //   description: document.banner_description,
+  //   link: document.banner_link,
+  //   linkLabel: document.banner_link_label,
+  //   background: document.banner_background,
+  // }
   const splashBannerContent = {
     title: splashDocument.title,
     description: splashDocument.sub_title,

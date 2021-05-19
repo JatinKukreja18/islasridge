@@ -43,5 +43,11 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://islasridge.us1.list-manage.com/subscribe/post?u=7b7adb5447ab1e6b4d82193aa&amp;id=c01a1b2d7c'
+      }
+    }
   ],
 }

@@ -1,4 +1,17 @@
 /* General */
+@import url(https://use.typekit.net/jqs8oav.css);
+body{
+  font-family: gitan-latin, sans-serif;
+  font-family: gill-sans-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+/* 
+@font-face {
+  font-family:"gitan-latin";
+  src:url("https://use.typekit.net/af/7d5eb9/00000000000000003b9aeb9e/27/l?subset_id=2&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/7d5eb9/00000000000000003b9aeb9e/27/d?subset_id=2&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/7d5eb9/00000000000000003b9aeb9e/27/a?subset_id=2&fvd=n5&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:500;
+} */
 *{
   box-sizing: border-box;
 }
@@ -62,20 +75,127 @@ footer {
   /* #6d6a49 */
   position: relative;
 }
-.homepage-banner:before{
+.splash-banner {
+  /* margin: -70px 0 80px; */
+  height: 100vh;
+  background-position: top ;
+  background-size: cover;
+  color: #ffffff;
+  line-height: 1.75;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  /* #6d6a49 */
+  z-index: 0;
+  position: relative;
+}
+.splash-banner:before{
   top: 0;
   left: 0;
-    position: absolute;
-    content:'';
-    width: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    border: 1vw solid #6d6a49;
-    border-left-width: 18vw;
-    border-right-width: 18vw;
-    border-top-width: 7vw;
-    border-bottom-width: 7vw;
+  position: absolute;
+  content:'';
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  border: 1vw solid #6d6a49;
+  border-left-width: 18vw;
+  border-right-width: 18vw;
+  border-top-width: 18vh;
+  border-bottom-width: 18vh;
+  z-index: -1;
+  background-color: #6d6a4924;
 }
+.splash-content {
+  text-align: center;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px;
+}
+.splash-footer{
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.splash-footer a,.splash-footer span,.splash-newletter button{
+  color: #e8d9d4;
+  line-height: 1.2;
+  font-size: 14px;
+  font-family: gitan-latin,sans-serif;
+  font-weight: 600;
+}
+.splash-title, .splash-description {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: gitan-latin,sans-serif;;
+}
+.splash-description {
+  font-family: gill-sans-nova,sans-serif;
+}
+.splash-title {
+  color: #feeeee;
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 70px;
+  margin-top: 12.5vh;
+}
+
+.splash-newletter{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 300px;
+  margin-top: auto;
+  align-items: flex-end;
+  display: inline-flex;
+}
+.splash-newletter input,.splash-newletter input:focus{
+  border: none;
+  flex: 1;
+  border-bottom: 1px solid #e8d9d4;
+  background-color: transparent;
+  padding-bottom: 5px;
+  box-shadow: none;
+  font-size: 14px;
+  line-height: 1;
+  outline: none;
+  color: #e8d9d4;
+}
+.splash-newletter button{
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  line-height: 1;
+  font-size: 14px;
+  border-bottom: 1px solid #e8d9d4;
+  cursor: pointer;
+}
+.splash-newletter .input-help-text a{
+  font-size: 12px;
+  color: #e8d9d4;
+  text-decoration: underline;
+}
+.splash-newletter .input-help-text{
+  font-size: 12px;
+  width: 100%;
+  line-height: 1;
+  position: absolute;
+  top: 100%;
+  padding-top: 2px;
+  /* text-align: left; */
+}
+
+@media only screen and (max-width:767px){
+  .splash-banner::before{
+    content: none;
+  }
+}
+
 .banner-content {
   text-align: center;
 }
@@ -86,9 +206,10 @@ footer {
   margin-right: auto;
 }
 .banner-title {
-  color: #ffffff;
+  color: #feeeee;
   font-size: 70px;
-  font-weight: 900;
+  text-transform: uppercase;
+  font-weight: 500;
   line-height: 70px;
 }
 .banner-button {
@@ -281,4 +402,19 @@ footer a {
     width: 100%;
     float: none;
   }
+}
+::-webkit-input-placeholder {
+  color:#e8d9d4;
+}
+
+::-moz-placeholder {
+  color:#e8d9d4;
+}
+
+::-ms-placeholder {
+  color:#e8d9d4;
+}
+
+::placeholder {
+  color:#e8d9d4;
 }
