@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+// import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 // import HomepageBanner from '../components/HomepageBanner'
 import SplashBanner from '../components/SplashBanner'
@@ -23,6 +23,7 @@ const Homepage = ({data}) => {
     email: splashDocument.contact_us_email,
     extraText: splashDocument.additional_text,
     background: splashDocument.banner,
+    credits: splashDocument.image_credits,
   }
   return (
     <>
@@ -86,9 +87,13 @@ export const query = graphql`
             thumbnails
             alt
           }
+          image_credits{
+            raw
+          }
           contact_us_email {
             raw
           }
+          
         }
       }
     }

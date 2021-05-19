@@ -1,40 +1,47 @@
 {
-    "Main" : {
-      "title" : {
-        "type" : "StructuredText",
-        "config" : {
-          "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
-          "label" : "Title"
-        }
-      },
-      "sub_title" : {
-        "type" : "StructuredText",
-        "config" : {
-          "multi" : "paragraph",
-          "label" : "Sub Title"
-        }
-      },
-      "additional_text" : {
-        "type" : "StructuredText",
-        "config" : {
-          "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-          "label" : "Additional Text"
-        }
-      },
-      "banner" : {
-        "type" : "Image",
-        "config" : {
-          "constraint" : { },
-          "thumbnails" : [ ],
-          "label" : "Banner"
-        }
-      },
-      "contact_us_email" : {
-        "type" : "StructuredText",
-        "config" : {
-          "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-          "label" : "Contact us Email"
-        }
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1,heading2,heading3,heading4,heading5,heading6",
+        "label" : "Title"
+      }
+    },
+    "sub_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "Sub Title"
+      }
+    },
+    "additional_text" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label" : "Additional Text"
+      }
+    },
+    "banner" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Banner"
+      }
+    },
+    "image_credits" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label" : "Image Credits"
+      }
+    },
+    "contact_us_email" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+        "label" : "Contact us Email"
       }
     }
   }
+}

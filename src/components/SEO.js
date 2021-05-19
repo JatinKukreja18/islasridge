@@ -15,6 +15,7 @@ const SEO = ({ description, title }) => (
         <Helmet>
           <title>{metaTitle}</title>
           <meta name="description" content={metaDescription} />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         </Helmet>
       )
     }}

@@ -24,8 +24,11 @@ const SplashBanner = ({bannerContent}) => (
       <a href={`mailto:${bannerContent.email.raw}`}>
         {RichText.asText(bannerContent.email.raw)}
       </a>
-      <span>
+      <span className="credits_desktop">
          {RichText.asText(bannerContent.extraText.raw)}
+      </span>
+      <span className="credits_mobile">
+        Image © {RichText.asText(bannerContent.credits.raw)}
       </span>
     </div>
   </div>
