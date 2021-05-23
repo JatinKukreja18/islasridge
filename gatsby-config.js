@@ -2,8 +2,8 @@ const linkResolver = require('./src/utils/linkResolver.js')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Prismic Tutorial',
-    description: 'Learn how to integrate Prismic into your Gatsby project.',
+    title: 'IslasRidge',
+    description: "Isla's Ridge is the way I want to look after people. It's the way I live my life.",
   },
   plugins: [
     'gatsby-plugin-react-helmet',

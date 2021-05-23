@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import { RichText } from 'prismic-reactjs'
 import Newsletter from '../components/Newsletter/index';
 
@@ -11,7 +11,6 @@ const SplashBanner = ({bannerContent}) => (
     backgroundImage: ` url(${bannerContent.background.url})`,
   }}
 >
-{/* linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), */}
 <div className="splash-content container">
     <h2 className="splash-title">
       {RichText.asText(bannerContent.title.raw)}

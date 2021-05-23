@@ -1,5 +1,5 @@
 import React from 'react'
-// import Layout from '../components/Layout'
+import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 // import HomepageBanner from '../components/HomepageBanner'
 import SplashBanner from '../components/SplashBanner'
@@ -27,7 +27,7 @@ const Homepage = ({data}) => {
   }
   return (
     <>
-      <SEO title="Splash" />
+      <SEO title="Isla's Ridge" />
       <SplashBanner bannerContent={splashBannerContent} />
     </>
   )

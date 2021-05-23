@@ -6,12 +6,6 @@ body{
   font-style: normal;
   font-weight: 400;
 }
-/* 
-@font-face {
-  font-family:"gitan-latin";
-  src:url("https://use.typekit.net/af/7d5eb9/00000000000000003b9aeb9e/27/l?subset_id=2&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/7d5eb9/00000000000000003b9aeb9e/27/d?subset_id=2&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/7d5eb9/00000000000000003b9aeb9e/27/a?subset_id=2&fvd=n5&v=3") format("opentype");
-  font-display:auto;font-style:normal;font-weight:500;
-} */
 *{
   box-sizing: border-box;
 }
@@ -103,7 +97,7 @@ footer {
   border-top-width: 18vh;
   border-bottom-width: 18vh;
   z-index: -1;
-  background-color: #6d6a4933;
+  background-color: #3a3f306e;
 }
 .splash-content {
   text-align: center;
@@ -133,6 +127,7 @@ footer {
 }
 .splash-title, .splash-description {
   font-size: 18px;
+  color: #e8d9d4;
   font-weight: 500;
   font-family: gitan-latin,sans-serif;;
 }
@@ -140,7 +135,7 @@ footer {
   font-family: gill-sans-nova,sans-serif;
 }
 .splash-title {
-  color: #feeeee;
+  color: #e8d9d4;
   font-size: 70px;
   text-transform: uppercase;
   font-weight: 500;
@@ -427,7 +422,7 @@ footer a {
   }
   .splash-title{
     line-height: 1;
-    font-size: 40px;
+    font-size: 46px;
     margin-bottom: 10px;
   }
   .splash-newletter{
