@@ -5,6 +5,10 @@ import SEO from '../components/SEO'
 import SplashBanner from '../components/SplashBanner'
 // import MainContent from '../components/MainContent'
 
+import './../styles/reset.css';
+import './../styles/common.css';
+import './../styles/style.css';
+
 const Homepage = ({data}) => {
   console.log(data);
   if (!data) return null
