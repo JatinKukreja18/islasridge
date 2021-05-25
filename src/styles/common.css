@@ -80,3 +80,9 @@ em {
 img {
   max-width: 100%;
 }
+input[type="search"] {
+  -webkit-appearance: none;
+}
+input{
+  border-radius: 0;
+}

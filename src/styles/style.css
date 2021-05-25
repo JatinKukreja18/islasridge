@@ -58,7 +58,8 @@ footer {
 /* Homepage Banner */
 .homepage-banner {
   /* margin: -70px 0 80px; */
-  height: 100vh;
+  height: 100vh; 
+  max-height: -webkit-fill-available;
   background-position: center center;
   background-size: cover;
   color: #ffffff;
