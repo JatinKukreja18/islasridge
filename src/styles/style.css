@@ -125,6 +125,7 @@ footer {
   font-size: 14px;
   font-family: gitan-latin,sans-serif;
   font-weight: 600;
+  margin: 0;
 }
 .splash-title, .splash-description {
   font-size: 18px;
@@ -157,6 +158,7 @@ footer {
 .splash-newletter input,.splash-newletter input:focus{
   border: none;
   flex: 1;
+  padding-left: 0;
   border-bottom: 1px solid #e8d9d4;
   background-color: transparent;
   padding-bottom: 5px;
