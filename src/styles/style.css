@@ -140,7 +140,8 @@ footer {
   text-transform: uppercase;
   font-weight: 500;
   line-height: 70px;
-  margin-top: 12.5vh;
+  margin-top: 18vh;
+  transform: translateY(calc(-50% - 6px));
 }
 
 .splash-newletter{
@@ -422,23 +423,53 @@ footer a {
   }
   .splash-title{
     line-height: 1;
-    font-size: 46px;
+    font-size: 40px;
     margin-bottom: 10px;
+    transform: none;
+    margin-top: 80px;
   }
   .splash-newletter{
-    position: fixed;
-    top: 50%;
+    /* position: fixed; */
+    /* top: 50%; */
     margin: 0;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: calc(100% - 60px);
+    margin-top: auto;
+    margin-bottom:30px;
+  }
+  .splash-description{
+    font-size: 16px;
+  }
+  .splash-newletter button{
+    line-height: 1.4;
+  }
+  .splash-newletter button,
+  .splash-footer a, 
+  .splash-newletter input, .splash-newletter input:focus{
+    font-size: 12px;
+  }
+  .splash-footer a{
+    margin-bottom: 10px;
+  }
+  .splash-footer a,
+  .splash-footer span, .splash-newletter button{
+    font-weight: 500;
+  }
+  .splash-newletter .input-help-text{
+  top: calc(100% + 5px);
+  }
+  .splash-newletter .input-help-text,
+  .splash-newletter .input-help-text a,
+  .splash-footer span{
+    font-size: 10px;
   }
   .splash-footer{
-    margin-top: auto;
     flex-direction: column;
     padding-bottom: 40px;
   }
   .splash-footer a{
-    position: fixed;
+    /* position: fixed; */
     top: calc(50% + 40px);
     transform: translateY(-50%);
   }
