@@ -421,9 +421,12 @@ footer a {
   body{
     height: 100vh;  max-height: -webkit-fill-available; 
   }
+  #___gatsby,#gatsby-focus-wrapper,
+  .splash-banner{
+    height: 100%;
+  }
   .splash-banner{
     background-position: 80% 50%;
-    height: 100%;
   }
   .splash-banner:before{
     border: none;
