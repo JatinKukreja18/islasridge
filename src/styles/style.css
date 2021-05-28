@@ -73,8 +73,8 @@ footer {
 .splash-banner {
   /* margin: -70px 0 80px; */
   height: 100vh;
-  background-position: top ;
   background-size: cover;
+  background-position: center;
   color: #ffffff;
   line-height: 1.75;
   text-align: center;
@@ -92,13 +92,13 @@ footer {
   width: 100%;
   box-sizing: border-box;
   height: 100%;
-  border: 1vw solid #6d6a49;
+  border: 1vw solid #6D6A49;
   border-left-width: 18vw;
   border-right-width: 18vw;
   border-top-width: 18vh;
   border-bottom-width: 18vh;
   z-index: -1;
-  background-color: #3a3f306e;
+  /* background-color: #3a3f306e; */
 }
 .splash-content {
   text-align: center;
@@ -120,7 +120,7 @@ footer {
   display: none;
 }
 .splash-footer a,.splash-footer span,.splash-newletter button{
-  color: #e8d9d4;
+  color: #FFEEEE;
   line-height: 1.2;
   font-size: 14px;
   font-family: gitan-latin,sans-serif;
@@ -128,8 +128,9 @@ footer {
   margin: 0;
 }
 .splash-title, .splash-description {
-  font-size: 18px;
-  color: #e8d9d4;
+  font-size: 24px;
+  color: #FFEEEE;
+  transform: translateY(calc(-50%));
   font-weight: 500;
   font-family: gitan-latin,sans-serif;;
 }
@@ -137,7 +138,7 @@ footer {
   font-family: gill-sans-nova,sans-serif;
 }
 .splash-title {
-  color: #e8d9d4;
+  color: #FFEEEE;
   font-size: 70px;
   text-transform: uppercase;
   font-weight: 500;
@@ -159,14 +160,16 @@ footer {
   border: none;
   flex: 1;
   padding-left: 0;
-  border-bottom: 1px solid #e8d9d4;
+  border-bottom: 1px solid #FFEEEE;
   background-color: transparent;
   padding-bottom: 5px;
   box-shadow: none;
   font-size: 14px;
+  font-family: gill-sans-nova, sans-serif;
+  font-weight: 600;
   line-height: 1;
   outline: none;
-  color: #e8d9d4;
+  color: #FFEEEE;
   margin: 0;
 }
 .splash-newletter button{
@@ -175,12 +178,12 @@ footer {
   padding: 5px;
   line-height: 1;
   font-size: 14px;
-  border-bottom: 1px solid #e8d9d4;
+  border-bottom: 1px solid #FFEEEE;
   cursor: pointer;
 }
 .splash-newletter .input-help-text a{
   font-size: 12px;
-  color: #e8d9d4;
+  color: #FFEEEE;
   text-decoration: underline;
 }
 .splash-newletter .input-help-text{
@@ -188,7 +191,7 @@ footer {
   width: 100%;
   line-height: 1;
   position: absolute;
-  color: #e8d9d4;
+  color: #FFEEEE;
   top: 100%;
   padding-top: 2px;
   /* text-align: left; */
@@ -404,19 +407,41 @@ footer a {
   }
 }
 ::-webkit-input-placeholder {
-  color:#e8d9d4;
+  color:#FFEEEE;
+  font-family: gill-sans-nova, sans-serif;
+  font-weight: 600;
 }
 
 ::-moz-placeholder {
-  color:#e8d9d4;
+  color:#FFEEEE;
+  font-family: gill-sans-nova, sans-serif;
+  font-weight: 600;
 }
 
 ::-ms-placeholder {
-  color:#e8d9d4;
+  color:#FFEEEE;
+  font-family: gill-sans-nova, sans-serif;
+  font-weight: 600;
 }
 
 ::placeholder {
-  color:#e8d9d4;
+  color:#FFEEEE;
+  font-family: gill-sans-nova, sans-serif;
+  font-weight: 600;
+}
+
+/* @media (max-width: 1024px){
+  .splash-banner{
+    background-size: 100%;
+    background-position: center;
+  }
+} */
+/* (min-height: 574px) and orien, */
+@media (min-aspect-ratio:16/10){
+  .splash-banner{    
+    background-position: center 14vh;
+    background-size: 77%;
+  }
 }
 @media (max-width: 767px){
   body{
@@ -428,6 +453,7 @@ footer a {
   }
   .splash-banner{
     background-position: 80% 50%;
+    background-size: cover;
   }
   .splash-banner:before{
     border: none;
@@ -452,6 +478,7 @@ footer a {
   }
   .splash-description{
     font-size: 16px;
+    transform:none;
   }
   .splash-newletter button{
     line-height: 1.4;
