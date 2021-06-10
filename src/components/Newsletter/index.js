@@ -4,6 +4,7 @@ import addToMailchimp from 'gatsby-plugin-mailchimp';
 const Newsletter = () => {
   const [email,setEmail] = useState('');
   const [message,setMessage] = useState('');
+  const [error,setError] = useState('');
   
   const handleSubscribe = async (e)=>{
     e.preventDefault();
@@ -14,7 +15,7 @@ const Newsletter = () => {
       // this.setState({ message: result.msg });
       setMessage(result.msg)
      }else{
-      setMessage('Please enter a valid email.')
+      setError('Please enter a valid email.')
      }
 
   }
@@ -23,13 +24,21 @@ const Newsletter = () => {
     setEmail(value)
   }
   return(
-    <form name="subscribeForm" method="POST" id="subscribe-form" className="splash-newletter">
-      <input value={email} onChange={(e)=>handleOnChange(e.target.value)} placeholder="Email"/>
-      <button onClick={(e)=>handleSubscribe(e)}  type="submit">
-        Subscribe
-      </button>
-      {message.length?
-      <span className="input-help-text" dangerouslySetInnerHTML={{__html: message}}></span>:null}
+    <form name="subscribeForm" method="POST" id="subscribe-form" className={`splash-newletter ${message.length?' hasMsg':''}`}>
+    { 
+      message.length ?
+      <span className="form-message" dangerouslySetInnerHTML={{__html: message}}></span>
+      :
+      <>
+        <input value={email} onChange={(e)=>handleOnChange(e.target.value)} placeholder="Email"/>
+        <button onClick={(e)=>handleSubscribe(e)}  type="submit">
+          Subscribe
+        </button>
+        <span className="input-help-text">{error}</span>
+        
+      </>
+        
+      }
     </form>
   )
 }

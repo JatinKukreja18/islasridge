@@ -20,7 +20,7 @@ const SplashBanner = ({bannerContent}) => (
     </p>
     <Newsletter/>
     <div className="splash-footer">
-      <a href={`mailto:${bannerContent.email.raw}`}>
+      <a href={`mailto:${RichText.asText(bannerContent.email.raw)}`}>
         {RichText.asText(bannerContent.email.raw)}
       </a>
       <span className="credits_desktop">
