@@ -518,9 +518,6 @@ footer a {
     font-size: 16px;
     transform:none;
   }
-  .splash-newletter button{
-    line-height: 1.4;
-  }
   .splash-newletter button,
   .splash-footer a, 
   .splash-newletter input, .splash-newletter input:focus{
@@ -534,7 +531,7 @@ footer a {
     font-weight: 400;
   } 
   .splash-newletter button{
-    font-weight: 500;
+    font-weight: 600;
   }
   .splash-newletter .input-help-text{
   top: calc(100% + 5px);
