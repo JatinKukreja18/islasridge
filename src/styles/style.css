@@ -10,7 +10,6 @@ body{
   box-sizing: border-box;
 }
 .container,
-header,
 footer {
   max-width: 980px;
   margin: auto;
@@ -21,16 +20,19 @@ footer {
 
 /* Header */
 .site-header {
-  height: 30px;
-  padding: 20px 0;
+  /* height: 30px; */
+  padding: 20px 40px;
 }
 .site-header,
 .site-header a {
   color: #484d52;
-  font-weight: 700;
+  /* font-weight: 700; */
+}
+#nav a.active-menu {
+  color: #FEBB21;
 }
 .site-header nav a:hover {
-  color: #72767B;
+  color: #FEBB21;
 }
 .homepage-header.site-header,
 .homepage-header.site-header a {
