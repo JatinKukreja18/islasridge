@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 
 const Header = ({ isHomepage }) => {
+  const [hamMenus, setHamMenus] = useState(false)
+  const openHamMenus = () =>{
+    setHamMenus(!hamMenus)
+  }
+  
   const homepageClass = isHomepage ? 'homepage-header' : ''
   return (
-    <header className={`site-header ${homepageClass}`}>
-      <Link to="/"><div className="logo">ISLA’S RIDGE</div></Link>
-      <nav id="nav">
-        <ul>
+    <header className={`site-header flex flex-between ${homepageClass}`}>
+      <div className="logo"><Link to="/">ISLA’S RIDGE</Link></div>
+      <nav id="nav" className={`${hamMenus ? "show-nav" : ""}`}>
+        <ul className="flex">
           <li><Link activeClassName="active-menu" to="/">Home</Link></li>
           <li><Link activeClassName="active-menu" to="/about">About</Link></li>
           {/* <li><Link activeClassName="active-menu" to="/more-info">More Info</Link></li> */}
@@ -17,6 +22,9 @@ const Header = ({ isHomepage }) => {
           <li><Link activeClassName="active-menu" to="/enquire">Enquire</Link></li>
         </ul>
       </nav>
+      <div className="ham-menus relative" onClick={openHamMenus}>
+        <div className="ham-menus-lines"></div>
+      </div>
     </header>
   )
 }

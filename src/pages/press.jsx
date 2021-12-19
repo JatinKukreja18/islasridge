@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const enquire = () => {
+const press = () => {
     return (
         <>
             <style>
@@ -10,13 +10,14 @@ const enquire = () => {
                     *, .site-header a, a{color:black;}
                 `}
             </style>
+
             <Layout>
-                <div>
-                    Enquire loremenquire loremenquire loremenquire loremenquire loremenquire loremenquire loremenquire loremenquire loremenquire loremenquire loremenquire loremenquire lorem
+                <div className="container">
+                    Press Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, nemo illum non nobis aliquid, quidem laudantium itaque minus dicta molestias recusandae iste voluptas fugiat mollitia ad pariatur nulla vel deleniti!
                 </div>
             </Layout>
         </>
     )
 }
 
-export default enquire
+export default press

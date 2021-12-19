@@ -11,8 +11,8 @@ const rooms = () => {
                 `}
             </style>
             <Layout>
-                <div>
-                    Rooms loremRooms loremRooms loremRooms loremRooms loremRooms loremRooms loremRooms loremRooms loremRooms loremRooms loremRooms loremRooms lorem
+                <div className="container">
+                    Rooms Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repellendus hic ipsa. Maxime veniam eius explicabo voluptate illum pariatur esse, quaerat itaque qui, porro aspernatur, veritatis nesciunt soluta quibusdam quo?
                 </div>
             </Layout>
         </>

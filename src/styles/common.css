@@ -86,3 +86,54 @@ input[type="search"] {
 input{
   border-radius: 0;
 }
+.padding-b-0{
+  padding-bottom: 0;
+}
+.margin-b-0{
+  margin-bottom: 0;
+}
+.flex{
+  display: flex;
+}
+.flex-center{
+  justify-content: center;
+}
+.flex-end{
+  justify-content: flex-end;
+}
+.flex-between{
+  justify-content: space-between;
+}
+.align-v-center{
+  align-items: center;
+}
+.padding-left{
+  padding-left: 20px;
+}
+.padding-r-5 {
+  padding-right: 5px;
+}
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.white{
+  color: white;
+}
+.semi-bold{
+  font-weight: 500;
+}
+.font-18{
+  font-size: 18px;
+}
+.hidden{
+  display: none;
+}
+.block{
+  display: block;
+}
+.pointer{
+  cursor: pointer;
+}

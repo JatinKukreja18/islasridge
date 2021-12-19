@@ -9,6 +9,7 @@ import './../styles/reset.css';
 import './../styles/common.css';
 import './../styles/style.css';
 import Header from '../components/Header'
+import Home from './home'
 
 const Homepage = ({data}) => {
   console.log(data);
@@ -32,9 +33,9 @@ const Homepage = ({data}) => {
   }
   return (
     <>
-      <Header />
+      
       <SEO title="Isla's Ridge" />
-      <HomepageBanner />
+      <Home />
       {/* <SplashBanner bannerContent={splashBannerContent} /> */}
     </>
   )

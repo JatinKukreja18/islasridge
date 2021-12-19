@@ -1,23 +1,22 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const press = () => {
+const tnc = () => {
     return (
         <>
             <style>
                 {`
-                    body{background-color: #FDEDED;}
+                    body{background-color: #F5F9E3;}
                     *, .site-header a, a{color:black;}
                 `}
             </style>
-
             <Layout>
-                <div>
-                    Press loremPress loremPress loremPress loremPress loremPress loremPress loremPress loremPress loremPress loremPress loremPress loremPress lorem
+                <div className="container">
+                    tnc loremtnc loremtnc loremtnc loremtnc loremtnc loremtnc loremtnc loremtnc loremtnc loremtnc loremtnc loremtnc lorem
                 </div>
             </Layout>
         </>
     )
 }
 
-export default press
+export default tnc
