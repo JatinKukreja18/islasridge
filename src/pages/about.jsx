@@ -147,7 +147,7 @@ const About = () => {
 export default About
 
 const AboutAccordion = (props) => {
-  const [toggleState, setToggleState] = useState(0)
+  const [toggleState, setToggleState] = useState(null)
   const toggleAccordion = (index) =>{
     toggleState === index ? setToggleState(null) : setToggleState(index);
   }
