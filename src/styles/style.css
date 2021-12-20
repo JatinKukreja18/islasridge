@@ -569,6 +569,13 @@ footer a {
   padding: 10px 5px;
   border-bottom: 1px solid;
 }
+.rotate-aero{
+  transform: rotate(180deg);
+}
+.accor-main:first-child{
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
 @media(min-width:670px){
   .ham-menus{display: none;}
 }

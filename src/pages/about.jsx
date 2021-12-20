@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -23,10 +23,6 @@ const About = () => {
     ]
   }
 
-  const toggleAccordion = () =>{
-    alert("Clicked")
-  }
-
   return (
     <>
       <style>
@@ -44,39 +40,34 @@ const About = () => {
         <main className="container">
           <h1 className="white about-text">{aboutStaticData.title}</h1>
           <p>{aboutStaticData.description}</p>
-
           <div>
             {
               aboutStaticData.accordion.map((data, index) =>{
                 return(
-                  <div className="accor-main pointer" onClick={toggleAccordion} key={index}>
-                    <div className="flex flex-between align-v-center">
-                      <div className="semi-bold font-18">{data.title}</div>
-                      <div className="flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" preserveAspectRatio="xMidYMid meet">
-                          <defs>
-                            <clipPath id="__lottie_element_2">
-                              <rect width="50" height="50" x="0" y="0"></rect>
-                            </clipPath>
-                          </defs>
-                          <g clipPath="url(#__lottie_element_2)">
-                            <g transform="matrix(0,1,-1,0,50,0)" opacity="1">
-                                <g opacity="1" transform="matrix(1,0,0,1,25,25)">
-                                  <path strokeLinecap="round" strokeLinejoin="round" fillOpacity="0" stroke="white" strokeOpacity="1" strokeWidth="4" d=" M-10,20 C-10,20 10,0 10,0 C10,0 -10,-20 -10,-20"></path>
-                                </g>
-                            </g>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="hidden">
-                      {data.description}
-                    </div>
-                  </div>
+                  <AboutAccordion aboutData={data} key={index} indexNum={index} />
                 )
               })
             }
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           {/* <section className="full-width-image content-section">
             <img src={skiLiftChairs} alt="Ski lift chairs" />
           </section>
@@ -154,3 +145,43 @@ const About = () => {
 }
 
 export default About
+
+const AboutAccordion = (props) => {
+  const [toggleState, setToggleState] = useState(0)
+  const toggleAccordion = (index) =>{
+    toggleState === index ? setToggleState(null) : setToggleState(index);
+  }
+
+  return(
+    <>
+      <div className="accor-main pointer" onClick={() => toggleAccordion(props.indexNum)}>
+        <div className="flex flex-between align-v-center">
+          <div className="semi-bold font-18">{props.aboutData.title}</div>
+          <div className={`flex ${toggleState === props.indexNum ? 'rotate-aero' : ''}`}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <clipPath id="__lottie_element_2">
+                  <rect width="50" height="50" x="0" y="0"></rect>
+                </clipPath>
+              </defs>
+              <g clipPath="url(#__lottie_element_2)">
+                <g transform="matrix(0,1,-1,0,50,0)" opacity="1">
+                    <g opacity="1" transform="matrix(1,0,0,1,25,25)">
+                      <path strokeLinecap="round" strokeLinejoin="round" fillOpacity="0" stroke="white" strokeOpacity="1" strokeWidth="4" d=" M-10,20 C-10,20 10,0 10,0 C10,0 -10,-20 -10,-20"></path>
+                    </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        {
+          toggleState === props.indexNum ?
+            <div className="">
+              {props.aboutData.description}
+            </div>
+          : false
+        }
+      </div>
+    </>
+  )
+}
