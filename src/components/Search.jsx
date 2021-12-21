@@ -2,7 +2,7 @@ import React from 'react'
 
 function Search() {
     return (
-        <div className="flex align-v-center">
+        <div className="flex align-v-center search-main">
             <input className="search-input" type="text"/>
             <div className="search-icon flex flex-end">
                 <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16">

@@ -597,6 +597,7 @@ footer a {
     background-color: #FFEEEE;
     transform: translateX(100%);
     transition: 0.4s;
+    flex-direction: column;
   }
   #nav a{
     color: black;
@@ -609,7 +610,7 @@ footer a {
     margin-top: 28px;
   }
   .site-header nav li{
-    margin-left: 0px;
+    margin-right: 0px;
   }
   .ham-menus-lines,.ham-menus-lines::before,.ham-menus-lines::after {
     width: 100%;
@@ -636,5 +637,12 @@ footer a {
   }
   .about-text,.site-header nav li{
     text-align: center;
+  }
+  .search-main{
+    width: 100%;
+    justify-content: center;
+  }
+  .search-input{
+    width: 60%;
   }
 }
