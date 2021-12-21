@@ -29,6 +29,7 @@ const About = () => {
           {`
               body{background-color: #6C6A48;}
               *, .site-header a, a{color:white;}
+              .search-icon > svg{fill:white;}
           `}
       </style>
       <Layout>

@@ -54,7 +54,7 @@ body{
 }
 .site-header nav li {
   /* display: inline-block; */
-  margin-left: 40px;
+  margin-right: 40px;
 }
 
 /* Homepage Banner */
@@ -563,6 +563,14 @@ footer a {
 }
 
 
+.search-input{
+  border: none;
+  border-bottom: 1px solid;
+  background-color: unset;
+  outline: none;
+  margin-right: 4px;
+  width: 65px;
+}
 .accor-main {
   border-top: 1px solid;
   margin-bottom: 20px;

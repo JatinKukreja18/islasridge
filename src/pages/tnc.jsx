@@ -32,12 +32,12 @@ const tnc = () => {
                 <div className="container">
                     <h3 className="grey-darker">{tncStaticData.title}</h3>
                     {
-                        tncStaticData.tncs.map((data) => {
+                        tncStaticData.tncs.map((data, index) => {
                             return(
-                                <>
+                                <div key={index}>
                                     <h3 className="grey-darker margin-b-0 padding-b-5">{data.title}</h3>
                                     <p className="grey-darker">{data.description}</p>
-                                </>
+                                </div>
                             )
                         })
                     }
