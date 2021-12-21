@@ -3,6 +3,7 @@
   "description": "",
   "version": "0.1.0",
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "gatsby": "^2.29.2",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-google-fonts": "^1.0.1",

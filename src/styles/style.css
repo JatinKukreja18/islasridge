@@ -563,6 +563,43 @@ footer a {
 }
 
 
+.submit-btn {
+  background-color: black;
+  border: none;
+  padding: 5px 14px;
+  outline: none;
+}
+.input-field::placeholder{
+  color: black;
+  font-size: 14px;
+}
+.center-form{
+  margin-right: 70px;
+}
+.input-field {
+  border: 1px solid;
+  outline: none;
+  background-color: unset;
+  width: 100%;
+  padding: 3px 4px;
+}
+.form-container{
+  width: 50%;
+  margin: auto;
+  padding-left: 108px;
+}
+.map{
+  width: 50%;
+}
+.map > img{
+  width: 100%;
+}
+.message-box{
+  resize: none;
+}
+.contact-fileds {
+  padding-bottom: 10px;
+}
 .search-input{
   border: none;
   border-bottom: 1px solid;
@@ -644,5 +681,35 @@ footer a {
   }
   .search-input{
     width: 60%;
+  }
+}
+
+
+@media(max-width:885px){
+  .map{
+    width: 40%;
+  }
+  .form-container{
+    width: 60%;
+    padding-left: 50px;
+  }
+}
+
+@media(max-width:700px){
+  .contact-main{
+    flex-direction: column;
+  }
+  .map{
+    order: 2;
+  }
+  .form-container, .map{
+    width: 100%;
+    padding: 0px;
+  }
+  .form-container{
+    padding-bottom: 20px;
+  }
+  .center-form{
+    margin-right: 50px;
   }
 }
