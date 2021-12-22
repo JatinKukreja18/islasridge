@@ -563,6 +563,14 @@ footer a {
 }
 
 
+.enquire_sent {
+  color: #23a228;
+  font-size: 16px;
+}
+.input-aero {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/select-arrow.png) 95% 50% no-repeat;
+  appearance: none;
+}
 .submit-btn {
   background-color: black;
   border: none;
@@ -581,7 +589,7 @@ footer a {
   outline: none;
   background-color: unset;
   width: 100%;
-  padding: 3px 4px;
+  padding: 4px 4px;
 }
 .form-container{
   width: 50%;
