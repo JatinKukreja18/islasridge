@@ -13,7 +13,25 @@ const rooms = () => {
             </style>
             <Layout>
                 <div className="container">
-                    Rooms Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repellendus hic ipsa. Maxime veniam eius explicabo voluptate illum pariatur esse, quaerat itaque qui, porro aspernatur, veritatis nesciunt soluta quibusdam quo?
+                    <div className="room-container flex">
+                        <div className="relative cover-box">
+                            <div className="shape"></div>
+                            <div className="room-main">
+                                <div className="room-box">INDIGO</div>
+                                <div className="room-box">MANGO</div>
+                                <div className="room-box">MANGO</div>
+                            </div>
+                        </div>
+
+                        <div className="relative cover-box">
+                            <div className="shape"></div>
+                            <div className="room-main">
+                                <div className="room-box">SAGE</div>
+                                <div className="room-box">CHUNNA</div>
+                                <div className="room-box">GREY</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Layout>
         </>

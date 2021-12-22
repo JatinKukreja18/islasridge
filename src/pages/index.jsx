@@ -35,7 +35,7 @@ const Homepage = ({data}) => {
     <>
       
       <SEO title="Isla's Ridge" />
-      <Home />
+      <Home bannerContent={splashBannerContent} />
       {/* <SplashBanner bannerContent={splashBannerContent} /> */}
     </>
   )

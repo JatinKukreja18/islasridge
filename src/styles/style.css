@@ -571,6 +571,28 @@ footer a {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/392/select-arrow.png) 95% 50% no-repeat;
   appearance: none;
 }
+.room-main {
+  width: 240px;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(calc(50%),1fr));
+}
+.room-box:nth-child(3){
+  grid-column-start: 1;
+  grid-column-end: 3;
+  text-align: center;
+  border-top: 1px solid;
+}
+.room-box {
+  text-align: center;
+  padding: 22px;
+}
+.cover-box:first-child{
+  margin-right: 40px;
+}
+.room-box:first-child{
+  border-right: 1px solid;
+}
 .submit-btn {
   background-color: black;
   border: none;
