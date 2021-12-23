@@ -15,7 +15,7 @@ const rooms = () => {
                 <div className="container">
                     <div className="room-container flex">
                         <div className="relative cover-box">
-                            <div className="shape"></div>
+                            <div className="room-shape"></div>
                             <div className="room-main">
                                 <div className="room-box">INDIGO</div>
                                 <div className="room-box">MANGO</div>
@@ -24,7 +24,7 @@ const rooms = () => {
                         </div>
 
                         <div className="relative cover-box">
-                            <div className="shape"></div>
+                            <div className="room-shape"></div>
                             <div className="room-main">
                                 <div className="room-box">SAGE</div>
                                 <div className="room-box">CHUNNA</div>

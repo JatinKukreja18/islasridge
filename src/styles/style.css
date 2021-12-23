@@ -563,6 +563,28 @@ footer a {
 }
 
 
+.room-container {
+  margin: 200px 0px;
+}
+.room-shape {
+  width: 100%;
+  height: 38px;
+  background-color: white;
+  position: relative;
+}
+.room-shape, .room-shape:before {
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+.room-shape:before {
+  content: '';
+  width: 240px;
+  height: 54px;
+  background: #6c6a48;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
 .enquire_sent {
   color: #23a228;
   font-size: 16px;
