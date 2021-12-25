@@ -1,32 +1,70 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import emailjs from "emailjs-com"
 import Layout from '../components/Layout'
 
+const contactSelect = [
+    {
+        id: 0,
+        title: "Room",
+        name: "room",
+        options: [
+            "Room1",
+            "Room2",
+            "Room3",
+            "Room4"
+        ]
+    },
+    {
+        id: 1,
+        title: "No. of guests",
+        name: "guest",
+        options: [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    {
+        id: 2,
+        title: "Retreat",
+        name: "retreat",
+        options: [
+            "Retreat1",
+            "Retreat2",
+            "Retreat3",
+            "Retreat4"
+        ]
+    }
+]
+
+const initialState = {
+    name: "",
+    email: "",
+    from: "",
+    to: "",
+    room: "",
+    guest: "",
+    retreat: "",
+    message: ""
+}
+
 const Enquire = () => {
-    const [enquireForm, setEnquireForm] = useState({
-        name: "",
-        email: "",
-        from: "",
-        to: "",
-        room: "",
-        guest: "",
-        retreat: "",
-        message: ""
-    })
+    const [enquireForm, setEnquireForm] = useState(initialState)
+    const [selectShow, setSelectShow] = useState(false)
     const [successMessage, setSuccessMessage] = useState(false)
     const [textLoading, setTextLoading] = useState(false)
 
     const checkInput = (e) =>{
         setEnquireForm({...enquireForm, [e.target.name]: e.target.value});
     }
-    console.log(enquireForm)
-    
+
     const fromSubmit = (e) =>{
         e.preventDefault()
-        emailjs.sendForm(
+        emailjs.send(
             "service_0ztixkf", 
             "template_subcg27",
-            e.target,
+            enquireForm,
             "user_ubpUjm4K0MQIgPHHaeedl"
         ).then(res=>{
             if(res.text === "OK"){
@@ -35,16 +73,25 @@ const Enquire = () => {
                     setSuccessMessage(false)
                 }, 6000);
                 setTextLoading(false)
+                setEnquireForm(initialState)
             }
-        }).catch(erro=>{
-            console.log(erro)
+        }).catch(error =>{
+            console.log(error)
             setSuccessMessage(false)
             setTextLoading(false)
         })
 
         setTextLoading(true)
     }
-    console.log(successMessage)
+
+    const selectHeading = (index) =>{
+        setSelectShow(index)
+    }
+
+    const customSelect = (selectName, optionName) => {
+        setEnquireForm({...enquireForm, [selectName]: optionName});
+        setSelectShow(null)
+    }
     return (
         <>
             <style>
@@ -92,52 +139,61 @@ const Enquire = () => {
 
                                 <div className="center-form">
                                     <div className="flex contact-fileds">
-                                        <select onChange={checkInput} className="input-field margin-r-15" name="from" defaultValue={enquireForm.from}>
-                                            <option disabled value={enquireForm.from}>From</option>
-                                            <option value="place1">place1</option>
-                                            <option value="place2">place2</option>
-                                            <option value="place3">place3</option>
-                                            <option value="place4">place4</option>
-                                        </select>
-                                        <select onChange={checkInput} className="input-field" name="to" defaultValue={enquireForm.to}>
-                                            <option disabled value={enquireForm.to}>To</option>
-                                            <option value="to1">to1</option>
-                                            <option value="to2">to2</option>
-                                            <option value="to3">to3</option>
-                                            <option value="to4">to4</option>
-                                        </select>
+                                        <div className="flex input-field margin-r-15 relative flex-between pointer">
+                                            <input onChange={checkInput} className="absolute hidden-date" type="date" name="from"/>
+                                            <div className="select-box-text">{enquireForm.from !== "" ? enquireForm.from : "From"}</div>
+                                            <div className="down-aero">
+                                                <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
+                                                    <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div className="flex input-field flex-between relative pointer">
+                                            <input onChange={checkInput} className="absolute hidden-date" type="date" name="to"/>
+                                            <div className="select-box-text">{enquireForm.to !== "" ? enquireForm.to : "To"}</div>
+                                            <div className="down-aero">
+                                                <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
+                                                    <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <div className="flex contact-fileds">
-                                        <select onChange={checkInput} className="input-field margin-r-15" name="room" defaultValue={enquireForm.room}>
-                                            <option disabled value={enquireForm.room}>Room</option>
-                                            <option value="room1">room1</option>
-                                            <option value="room2">room2</option>
-                                            <option value="room3">room3</option>
-                                            <option value="room4">room4</option>
-                                        </select>
-                                        <select onChange={checkInput} className="input-field" name="guest" defaultValue={enquireForm.guest}>
-                                            <option disabled value={enquireForm.guest}>No. of guests</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                        </select>
+                                    <div className="contact-fileds select-box-main">
+                                        {
+                                            contactSelect.map((data, index) => {
+                                                return(
+                                                    <div key={index} className="flex-1 relative select-container">
+                                                        <div onClick={() => selectHeading(index)} className="flex input-field flex-between pointer align-v-center">
+                                                            <div className="select-box-text">{enquireForm[data.name] !== "" ? enquireForm[data.name] : data.title}</div>
+                                                            <div className="down-aero">
+                                                                <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
+                                                                    <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        {
+                                                            selectShow === index ? 
+                                                                <div className="room-list-main absolute">
+                                                                    {
+                                                                        data.options.map((options, optionIndex) => {
+                                                                            return(
+                                                                                <div onClick={() => customSelect(data.name, options)} key={optionIndex} className="room-list pointer">{options}</div>
+                                                                            )
+                                                                        })
+                                                                    }
+                                                                </div>
+                                                            : false
+                                                        }
+                                                    </div>
+                                                )
+                                            })
+                                        }
                                     </div>
-
-                                    <div className="contact-fileds">
-                                        <select onChange={checkInput} className="input-field" name="retreat" defaultValue={enquireForm.retreat}>
-                                            <option disabled value={enquireForm.retreat}>Retreat</option>
-                                            <option value="retreat1">retreat1</option>
-                                            <option value="retreat2">retreat2</option>
-                                            <option value="retreat3">retreat3</option>
-                                            <option value="retreat4">retreat4</option>
-                                        </select>
-                                    </div>
+                                
                                 </div>
 
                                 <div className="contact-fileds">
-                                    <textarea onChange={checkInput} value={enquireForm.message} className="input-field message-box" name="message" placeholder="Message" rows="7"></textarea>
+                                    <textarea onChange={checkInput} value={enquireForm.message} className="input-field message-box" name="message" placeholder="Message" rows="4"></textarea>
                                 </div>
 
                                 <button className="submit-btn white pointer" type="submit">{textLoading ? "SENDING" : "SEND"}</button>
