@@ -798,10 +798,12 @@ footer a {
     top: 0;
     opacity: 0;
     transition: 0.4s;
+    visibility: hidden;
   }
   .show-overlay{
     opacity: 0.4;
     transition-delay: 0.1s;
+    visibility: unset;
   }
 }
 
