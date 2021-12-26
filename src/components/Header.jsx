@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Search from './Search'
+import Overlay from './Overlay'
 
 const Header = ({ isHomepage }) => {
   const [hamMenus, setHamMenus] = useState(false)
@@ -65,6 +66,8 @@ const Header = ({ isHomepage }) => {
       <div className="ham-menus relative" onClick={openHamMenus}>
         <div className="ham-menus-lines"></div>
       </div>
+
+      <Overlay isOverlayShow={hamMenus} hideContainer={openHamMenus} />
     </header>
   )
 }
