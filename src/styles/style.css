@@ -831,6 +831,11 @@ footer a {
     padding-bottom: 20px;
   }
   .center-form{
-    margin-right: 50px;
+    margin-right: 40px;
+  }
+}
+@media(max-width:740px){
+  .site-header nav li{
+    margin-right: 28px;    
   }
 }
