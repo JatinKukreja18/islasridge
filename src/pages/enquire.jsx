@@ -54,34 +54,40 @@ const Enquire = () => {
     const [selectShow, setSelectShow] = useState(false)
     const [successMessage, setSuccessMessage] = useState(false)
     const [textLoading, setTextLoading] = useState(false)
+    const [formError, setFormError] = useState({})
 
     const checkInput = (e) =>{
-        setEnquireForm({...enquireForm, [e.target.name]: e.target.value});
+        setEnquireForm({...enquireForm, [e.target.name]: e.target.value})
     }
+
+    const dateObject = new Date();
+    const todaysDate = `${dateObject.getFullYear()}-${dateObject.getMonth()+1}-${dateObject.getDate()}`
 
     const fromSubmit = (e) =>{
         e.preventDefault()
-        emailjs.send(
-            "service_0ztixkf", 
-            "template_subcg27",
-            enquireForm,
-            "user_ubpUjm4K0MQIgPHHaeedl"
-        ).then(res=>{
-            if(res.text === "OK"){
-                setSuccessMessage(true)
-                setTimeout(() => {
-                    setSuccessMessage(false)
-                }, 6000);
-                setTextLoading(false)
-                setEnquireForm(initialState)
-            }
-        }).catch(error =>{
-            console.log(error)
-            setSuccessMessage(false)
-            setTextLoading(false)
-        })
+        // emailjs.send(
+        //     "service_0ztixkf", 
+        //     "template_subcg27",
+        //     enquireForm,
+        //     "user_ubpUjm4K0MQIgPHHaeedl"
+        // ).then(res=>{
+        //     if(res.text === "OK"){
+        //         setSuccessMessage(true)
+        //         setTimeout(() => {
+        //             setSuccessMessage(false)
+        //         }, 6000);
+        //         setTextLoading(false)
+        //         setEnquireForm(initialState)
+        //     }
+        // }).catch(error =>{
+        //     console.log(error)
+        //     setSuccessMessage(false)
+        //     setTextLoading(false)
+        // })
 
         setTextLoading(true)
+        // setFormError(enquireForm)
+        console.log(enquireForm)
     }
 
     const selectHeading = (index) =>{
@@ -92,6 +98,7 @@ const Enquire = () => {
         setEnquireForm({...enquireForm, [selectName]: optionName});
         setSelectShow(null)
     }
+    console.log(formError)
     return (
         <>
             <style>
@@ -140,7 +147,7 @@ const Enquire = () => {
                                 <div className="center-form">
                                     <div className="flex contact-fileds">
                                         <div className="flex input-field margin-r-15 relative flex-between pointer">
-                                            <input onChange={checkInput} className="absolute hidden-date" type="date" name="from"/>
+                                            <input onChange={checkInput} className="absolute hidden-date" type="date" min={todaysDate} name="from"/>
                                             <div className="select-box-text">{enquireForm.from !== "" ? enquireForm.from : "From"}</div>
                                             <div className="down-aero">
                                                 <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
@@ -149,7 +156,7 @@ const Enquire = () => {
                                             </div>
                                         </div>
                                         <div className="flex input-field flex-between relative pointer">
-                                            <input onChange={checkInput} className="absolute hidden-date" type="date" name="to"/>
+                                            <input onChange={checkInput} className="absolute hidden-date" type="date" min={todaysDate} name="to"/>
                                             <div className="select-box-text">{enquireForm.to !== "" ? enquireForm.to : "To"}</div>
                                             <div className="down-aero">
                                                 <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
