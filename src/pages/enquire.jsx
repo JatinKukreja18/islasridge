@@ -38,23 +38,16 @@ const contactSelect = [
     }
 ]
 
-const initialState = {
-    name: "",
-    email: "",
-    from: "",
-    to: "",
-    room: "",
-    guest: "",
-    retreat: "",
-    message: ""
-}
+const formFields = {name: "",email: "",from: "",to: "",room: "",guest: "",retreat: "",message: ""}
 
 const Enquire = () => {
-    const [enquireForm, setEnquireForm] = useState(initialState)
+    const [enquireForm, setEnquireForm] = useState(formFields)
     const [selectShow, setSelectShow] = useState(false)
     const [successMessage, setSuccessMessage] = useState(false)
     const [textLoading, setTextLoading] = useState(false)
-    const [formError, setFormError] = useState({})
+    const [isformValidate, setFormValidate] = useState(false);
+    const [formErrors, setFormErrors] = useState({})
+
 
     const checkInput = (e) =>{
         setEnquireForm({...enquireForm, [e.target.name]: e.target.value})
@@ -65,29 +58,30 @@ const Enquire = () => {
 
     const fromSubmit = (e) =>{
         e.preventDefault()
-        // emailjs.send(
-        //     "service_0ztixkf", 
-        //     "template_subcg27",
-        //     enquireForm,
-        //     "user_ubpUjm4K0MQIgPHHaeedl"
-        // ).then(res=>{
-        //     if(res.text === "OK"){
-        //         setSuccessMessage(true)
-        //         setTimeout(() => {
-        //             setSuccessMessage(false)
-        //         }, 6000);
-        //         setTextLoading(false)
-        //         setEnquireForm(initialState)
-        //     }
-        // }).catch(error =>{
-        //     console.log(error)
-        //     setSuccessMessage(false)
-        //     setTextLoading(false)
-        // })
-
-        setTextLoading(true)
-        // setFormError(enquireForm)
-        console.log(enquireForm)
+        if(isformValidate){            
+            emailjs.send(
+                "service_0ztixkf", 
+                "template_subcg27",
+                enquireForm,
+                "user_ubpUjm4K0MQIgPHHaeedl"
+            ).then(res=>{
+                if(res.text === "OK"){
+                    setSuccessMessage(true)
+                    setTimeout(() => {
+                        setSuccessMessage(false)
+                    }, 6000);
+                    setTextLoading(false)
+                    setEnquireForm(formFields)
+                    setFormValidate(false)
+                }
+            }).catch(error =>{
+                console.log(error)
+                setSuccessMessage(false)
+                setTextLoading(false)
+            })
+            setTextLoading(true)
+        }
+        validateEnquire(enquireForm)
     }
 
     const selectHeading = (index) =>{
@@ -98,7 +92,40 @@ const Enquire = () => {
         setEnquireForm({...enquireForm, [selectName]: optionName});
         setSelectShow(null)
     }
-    console.log(formError)
+
+    const validateEnquire = (allValues) => {
+        const errorMessage = {}
+        const {name,email,from,to,room,guest,retreat,message} = allValues;
+        if(name === ""){
+            errorMessage.name = "Name is required";
+        }
+        if(email === ""){
+            errorMessage.email = "Email is required";
+        }
+        if(from === ""){
+            errorMessage.from = "From is required";
+        }
+        if(to === ""){
+            errorMessage.to = "To is required";
+        }
+        if(room === ""){
+            errorMessage.room = "Room is required";
+        }
+        if(guest === ""){
+            errorMessage.guest = "Guest is required";
+        }
+        if(retreat === ""){
+            errorMessage.retreat = "Retreat is required";
+        }
+        if(message === ""){
+            errorMessage.message = "Message is required";
+        }
+        setFormErrors(errorMessage)
+        if(Object.keys(errorMessage).length === 0){
+            setFormValidate(true)
+        }
+    }
+
     return (
         <>
             <style>
@@ -138,31 +165,56 @@ const Enquire = () => {
                             <form action="" onSubmit={fromSubmit}>
                                 <div className="contact-fileds">
                                     <input onChange={checkInput} value={enquireForm.name} className="input-field" type="text" name="name" id="name" placeholder="Name" />
+                                    {
+                                        formErrors.name !== undefined ? 
+                                            <div className="error-message">{formErrors.name}</div>
+                                        : false
+                                    }
                                 </div>
 
                                 <div className="contact-fileds">
                                     <input onChange={checkInput} value={enquireForm.email} className="input-field" type="text" name="email" id="email" placeholder="E-mail" />
+                                    {
+                                        formErrors.email !== undefined ? 
+                                            <div className="error-message">{formErrors.email}</div>
+                                        : false
+                                    }
                                 </div>
 
                                 <div className="center-form">
                                     <div className="flex contact-fileds">
-                                        <div className="flex input-field margin-r-15 relative flex-between pointer">
-                                            <input onChange={checkInput} className="absolute hidden-date" type="date" min={todaysDate} name="from"/>
-                                            <div className="select-box-text">{enquireForm.from !== "" ? enquireForm.from : "From"}</div>
-                                            <div className="down-aero">
-                                                <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
-                                                    <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
-                                                </svg>
+                                        <div className="flex-1 margin-r-15">
+                                            <div className="flex input-field relative flex-between pointer">
+                                                <input onChange={checkInput} className="absolute hidden-date" type="date" min={todaysDate} name="from"/>
+                                                <div className="select-box-text">{enquireForm.from !== "" ? enquireForm.from : "From"}</div>
+                                                <div className="down-aero">
+                                                    <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
+                                                        <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
+                                                    </svg>
+                                                </div>
                                             </div>
+                                                {
+                                                    formErrors.from !== undefined ? 
+                                                        <div className="error-message">{formErrors.from}</div>
+                                                    : false
+                                                }
                                         </div>
-                                        <div className="flex input-field flex-between relative pointer">
-                                            <input onChange={checkInput} className="absolute hidden-date" type="date" min={todaysDate} name="to"/>
-                                            <div className="select-box-text">{enquireForm.to !== "" ? enquireForm.to : "To"}</div>
-                                            <div className="down-aero">
-                                                <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
-                                                    <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
-                                                </svg>
+
+                                        <div className="flex-1">
+                                            <div className="flex input-field flex-between relative pointer">
+                                                <input onChange={checkInput} className="absolute hidden-date" type="date" min={todaysDate} name="to"/>
+                                                <div className="select-box-text">{enquireForm.to !== "" ? enquireForm.to : "To"}</div>
+                                                <div className="down-aero">
+                                                    <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
+                                                        <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
+                                                    </svg>
+                                                </div>
                                             </div>
+                                                {
+                                                    formErrors.to !== undefined ? 
+                                                        <div className="error-message">{formErrors.to}</div>
+                                                    : false
+                                                }
                                         </div>
                                     </div>
                                     <div className="contact-fileds select-box-main">
@@ -191,6 +243,11 @@ const Enquire = () => {
                                                                 </div>
                                                             : false
                                                         }
+                                                        {
+                                                            formErrors[data.name] !== undefined ? 
+                                                                <div className="error-message">{formErrors[data.name]}</div>
+                                                            : false
+                                                        }
                                                     </div>
                                                 )
                                             })
@@ -201,6 +258,11 @@ const Enquire = () => {
 
                                 <div className="contact-fileds">
                                     <textarea onChange={checkInput} value={enquireForm.message} className="input-field message-box" name="message" placeholder="Message" rows="4"></textarea>
+                                    {
+                                        formErrors.message !== undefined ? 
+                                            <div className="error-message">{formErrors.message}</div>
+                                        : false
+                                    }
                                 </div>
 
                                 <button className="submit-btn white pointer" type="submit">{textLoading ? "SENDING" : "SEND"}</button>

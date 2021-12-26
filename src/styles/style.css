@@ -564,6 +564,11 @@ footer a {
 
 
 
+.error-message {
+  color: red;
+  font-size: 12px;
+  line-height: normal;
+}
 .select-box-text{
   font-size: 14px;
   color: black;
