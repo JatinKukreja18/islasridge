@@ -48,7 +48,39 @@ const Enquire = () => {
     const [isformValidate, setFormValidate] = useState(false);
     const [formErrors, setFormErrors] = useState({})
 
-
+    const validateEnquire = (allValues) => {
+        const errorMessage = {}
+        const {name,email,from,to,room,guest,retreat,message} = allValues;
+        if(name === ""){
+            errorMessage.name = "Name is required";
+        }
+        if(email === ""){
+            errorMessage.email = "Email is required";
+        }
+        if(from === ""){
+            errorMessage.from = "From is required";
+        }
+        if(to === ""){
+            errorMessage.to = "To is required";
+        }
+        if(room === ""){
+            errorMessage.room = "Room is required";
+        }
+        if(guest === ""){
+            errorMessage.guest = "Guest is required";
+        }
+        if(retreat === ""){
+            errorMessage.retreat = "Retreat is required";
+        }
+        if(message === ""){
+            errorMessage.message = "Message is required";
+        }
+        setFormErrors(errorMessage)
+        if(Object.keys(errorMessage).length === 0){
+            setFormValidate(true)
+        }
+    }
+    
     const checkInput = (e) =>{
         setEnquireForm({...enquireForm, [e.target.name]: e.target.value})
     }
@@ -91,39 +123,6 @@ const Enquire = () => {
     const customSelect = (selectName, optionName) => {
         setEnquireForm({...enquireForm, [selectName]: optionName});
         setSelectShow(null)
-    }
-
-    const validateEnquire = (allValues) => {
-        const errorMessage = {}
-        const {name,email,from,to,room,guest,retreat,message} = allValues;
-        if(name === ""){
-            errorMessage.name = "Name is required";
-        }
-        if(email === ""){
-            errorMessage.email = "Email is required";
-        }
-        if(from === ""){
-            errorMessage.from = "From is required";
-        }
-        if(to === ""){
-            errorMessage.to = "To is required";
-        }
-        if(room === ""){
-            errorMessage.room = "Room is required";
-        }
-        if(guest === ""){
-            errorMessage.guest = "Guest is required";
-        }
-        if(retreat === ""){
-            errorMessage.retreat = "Retreat is required";
-        }
-        if(message === ""){
-            errorMessage.message = "Message is required";
-        }
-        setFormErrors(errorMessage)
-        if(Object.keys(errorMessage).length === 0){
-            setFormValidate(true)
-        }
     }
 
     return (
