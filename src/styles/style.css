@@ -861,6 +861,9 @@ footer a {
     background-color: white;
     transition: 0.4s;
   }
+  .ham-cross .ham-menus-lines, .ham-cross .ham-menus-lines::after,.ham-cross .ham-menus-lines::before{
+    background-color: red;  
+  }
   .ham-menus-lines::before,.ham-menus-lines::after {
     content: "";
     position: absolute;

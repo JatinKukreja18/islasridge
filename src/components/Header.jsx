@@ -63,7 +63,7 @@ const Header = ({ isHomepage }) => {
 
         <Search />
       </nav>
-      <div className="ham-menus relative" onClick={openHamMenus}>
+      <div className={`ham-menus relative ${hamMenus ? "ham-cross" : ""}`} onClick={openHamMenus}>
         <div className="ham-menus-lines"></div>
       </div>
 
