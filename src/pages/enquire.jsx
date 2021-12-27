@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import emailjs from "emailjs-com"
 import Layout from '../components/Layout'
 
@@ -117,12 +117,12 @@ const Enquire = () => {
     }
 
     const selectHeading = (index) =>{
-        setSelectShow(index)
+        selectShow === index ? setSelectShow(false) :  setSelectShow(index)
     }
 
     const customSelect = (selectName, optionName) => {
         setEnquireForm({...enquireForm, [selectName]: optionName});
-        setSelectShow(null)
+        setSelectShow(false)
     }
 
     return (

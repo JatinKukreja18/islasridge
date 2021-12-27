@@ -564,6 +564,20 @@ footer a {
 
 
 
+.press-box {
+  background-color: #6C6A48;
+  padding: 100px 10px 20px 10px ;
+}
+.press-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));  
+  grid-gap: 80px 80px;  
+  margin-top: 50px;
+}
+.press-title {
+  margin-bottom: 100px;
+  font-size: 30px;
+}
 .error-message {
   color: red;
   font-size: 12px;
@@ -804,6 +818,9 @@ footer a {
     opacity: 0.4;
     transition-delay: 0.1s;
     visibility: unset;
+  }
+  .press-main{
+    grid-gap: 30px;    
   }
 }
 
