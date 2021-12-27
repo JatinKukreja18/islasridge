@@ -144,7 +144,8 @@ body{
 }
 .splash-title {
   color: #FFEEEE;
-  font-size: 86px;
+  /* font-size: 86px; */
+  font-size: 22px;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 70px;
@@ -228,7 +229,27 @@ body{
 
 
 .banner-content {
-  text-align: center;
+  /* text-align: center; */
+}
+.banner-content {
+  margin-top: calc(0px - 35px);
+  position: relative;
+  left: 10%;
+}
+.home-banner-title{
+  text-align: right;
+  font-size: 24px;
+}
+.banner-main{
+  margin-bottom: 80px;
+  padding-top: 40px;  
+}
+.banner-main > img{
+  object-fit: cover;
+}
+.banner-heading {
+  font-size: 40px;
+  line-height: 48px;
 }
 .banner-title, .banner-description {
   width: 90%;
@@ -367,7 +388,7 @@ footer a {
   }
 }
 @media (max-width: 1060px) {
-  .site-header {
+  .site-header,footer {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -570,13 +591,13 @@ footer a {
 }
 .press-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));  
+  grid-template-columns: repeat(3, 1fr);  
   grid-gap: 80px 80px;
 }
 .retreats-main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
-  grid-gap: 0px 30px;
+  grid-gap: 20px 30px; 
 }
 .retreats-title{
   color: #6C6A48;
@@ -597,7 +618,7 @@ footer a {
   border: 10px solid #cdcdcd;
 }
 .retreat-main{
-  grid-template-columns: repeat(auto-fit, minmax(calc(440px - 60px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(calc(50% - 60px), 1fr));
   display: grid;
   grid-gap: 0px 60px;
   padding-bottom: 60px;  
@@ -806,7 +827,7 @@ footer a {
   border-bottom: 0px;
 }
 @media(min-width:670px){
-  .ham-menus,.overlay{display: none;}
+  .ham-menus,.overlay,.m-heading{display: none;} 
 }
 @media(max-width:670px){
   #nav{
@@ -887,6 +908,33 @@ footer a {
   .press-main{
     grid-gap: 30px;    
   }
+  .m-heading {
+    font-size: 24px;
+  }
+  .room-main, .room-main .room-box{
+    border: none; 
+  }
+  .room-shape:before,.room-shape{
+    display: none;
+  }
+  .room-container{
+    flex-direction: column;
+    margin: 60px 0px 0px 0px;    
+  }
+  .room-main,.room-box{ 
+    width: 100%;
+    display: block;
+    font-size: 28px;
+  }
+  .cover-box:first-child{ 
+    margin-right: 0px;
+  }
+  .room-img-main{
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(300px, 1fr);
+    overflow-x: auto;
+    grid-gap: 20px;
+  }
 }
 
 
@@ -917,9 +965,55 @@ footer a {
   .center-form{
     margin-right: 40px;
   }
+  .press-main{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px 40px;
+  }
 }
 @media(max-width:740px){
   .site-header nav li{
     margin-right: 28px;    
+  }
+}
+@media(max-width:1150px){
+  .banner-content{
+    left: 4%;
+  }
+  .banner-heading{
+    font-size: 28px;
+  }
+}
+@media (max-width: 1020px){
+.banner-content {
+    left: 0;
+    padding: 0px 30px;
+  }
+  .banner-heading{
+    font-size: 36px;
+  }
+  .home-container{
+    padding: 0px;
+    margin-top: 0px;
+  }
+}
+@media (max-width: 860px){
+  .retrea-title{
+    font-size: 30px;
+  }
+  .retreat-main{
+    grid-gap: 0px 30px;    
+  }
+  .retreat-heading > img{
+    width: 20px;
+  }
+  .retreat-heading-main{
+    padding: 20px 0px;    
+  }
+  .retreats-box{
+    padding: 20px 30px;
+  }
+  .retreats-title{
+    text-align: center;
+    font-size: 34px;
   }
 }

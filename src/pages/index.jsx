@@ -12,7 +12,7 @@ import Header from '../components/Header'
 import Home from './home'
 
 const Homepage = ({data}) => {
-  console.log(data);
+  // console.log(data);
   if (!data) return null
   // const document = data.allPrismicHomepage.edges[0].node.data
   const splashDocument = data.allPrismicSplash.edges[0].node.data

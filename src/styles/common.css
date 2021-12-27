@@ -149,9 +149,12 @@ input{
 .text-center{
   text-align: center;
 }
-.margin-t-50{
-  margin-top: 50px;  
+.padding-t-50{
+  padding-top: 50px;  
 }
 .full-width{
   width: 100%;
+}
+.img-cover{
+  object-fit: cover;
 }

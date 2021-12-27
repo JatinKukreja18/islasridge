@@ -12,6 +12,7 @@ const RetreatDetail = (props) => {
                 {`
                     body,.site-header{background-color: #ffefd9;}
                     *, .site-header a, a{color:black;}
+                    .ham-menus-lines, .ham-menus-lines::before, .ham-menus-lines::after{background-color: black;} 
                 `}
             </style>
             <Layout>
@@ -26,11 +27,11 @@ const RetreatDetail = (props) => {
                             return(
                                 <div className="retreat-main" key={index}>
                                     <div>
-                                        <img className="full-width" src={dummyImg} alt="" />
+                                        <img className="full-width left-img img-cover" height="100%" src={dummyImg} alt="" />
                                     </div>
-                                    <div className="flex align-v-center">
+                                    <div className="flex align-v-center retreat-heading-main">
                                         <div className="">
-                                            <div className="flex align-v-center">
+                                            <div className="flex align-v-center retreat-heading">
                                                 <img className="" src={kiteImg} alt="" />
                                                 <h5 className="retrea-title padding-left-20">Cooking</h5>
                                             </div>

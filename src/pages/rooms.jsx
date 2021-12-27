@@ -14,6 +14,7 @@ const rooms = () => {
             </style>
             <Layout>
                 <div className="container">
+                    <div className="m-heading text-center">Rooms</div>
                     <div className="room-container flex">
                         <div className="relative cover-box">
                             <div className="room-shape"></div>

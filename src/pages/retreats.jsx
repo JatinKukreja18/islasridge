@@ -20,11 +20,13 @@ const retreats = () => {
                 {`
                     body,.site-header{background-color: #FDEDED;}
                     *, .site-header a, a{color:black;}
+                    .ham-menus-lines, .ham-menus-lines::before, .ham-menus-lines::after{background-color: black;} 
                 `}
             </style>
             <Layout>    
                 <div className="container">
-                    <div className="retreats-main margin-t-50">
+                    <div className="m-heading text-center">Retreats</div>
+                    <div className="retreats-main padding-t-50">
                         {
                             retreatsData.map((data, index) => {
                                 return(
