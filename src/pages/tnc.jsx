@@ -24,7 +24,7 @@ const tnc = () => {
         <>
             <style>
                 {`
-                    body{background-color: #F5F9E3;}
+                    body,.site-header{background-color: #F5F9E3;}
                     *, .site-header a, a{color:black;}
                 `}
             </style>

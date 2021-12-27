@@ -44,14 +44,14 @@ const press = () => {
         <>
             <style>
                 {`
-                    body{background-color: #FDEDED;}
+                    body,.site-header{background-color: #FDEDED;}
                     *, .site-header a, a{color:black;}
                 `}
             </style>
 
             <Layout>
                 <div className="container">
-                    <div className="press-main">
+                    <div className="press-main margin-t-50">
                         {
                             presssData.map((data, index) => {
                                 return(

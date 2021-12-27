@@ -129,7 +129,7 @@ const Enquire = () => {
         <>
             <style>
                 {`
-                    body{background-color: #FDEDED;}
+                    body,.site-header{background-color: #FDEDED;}
                     *, .site-header a, a{color:black;}
                 `}
             </style>
