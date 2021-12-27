@@ -888,6 +888,7 @@ footer a {
   }
   .search-input{
     width: 60%;
+    border-color: black;
   }
   .overlay{
     position: fixed;
@@ -934,6 +935,9 @@ footer a {
     grid-auto-columns: minmax(300px, 1fr);
     overflow-x: auto;
     grid-gap: 20px;
+  }
+  body .search-icon > svg{
+    fill: black;
   }
 }
 
