@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
 import RoomMainBanner from '../images/roomMain.png'
@@ -17,6 +18,11 @@ const rooms = () => {
             <Layout>
                 <div className="container">
                     <div className="full-banner">
+                        <div className="breadcrumb padding-b-5">
+                            <Link to="/room-details">Rooms</Link>
+                            <span className="seprator"> / </span>
+                            <Link to="/room-details">Room Name</Link>
+                        </div>
                         <img className="full-width" src={RoomMainBanner} alt="" />
                         <h5 className="room-name">Saga Room</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sequi officia fugiat earum in veniam quod aut voluptates magnam natus, voluptas qui ut blanditiis dolor? Numquam quia veritatis voluptatibus minima?</p>

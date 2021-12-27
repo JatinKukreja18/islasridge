@@ -712,8 +712,14 @@ footer a {
 }
 .room-img-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(445px , 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
   grid-gap: 50px 50px;
+}
+.breadcrumb, .breadcrumb * {
+  color: #FEBB21;
+}
+.seprator{
+  padding: 0px 4px;
 }
 .room-bottom-desc {
   padding: 30px 0px;
@@ -725,17 +731,20 @@ footer a {
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
-  border-top: 1px solid;
+  border-top: 1px solid white;
 }
 .room-box {
   text-align: center;
   padding: 22px;
 }
+.room-box:hover{
+  color: #FEBB21;
+}
 .cover-box:first-child{
   margin-right: 40px;
 }
 .room-box:first-child{
-  border-right: 1px solid;
+  border-right: 1px solid white;
 }
 .submit-btn {
   background-color: black;

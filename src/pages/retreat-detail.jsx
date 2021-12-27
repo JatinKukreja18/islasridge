@@ -16,6 +16,11 @@ const RetreatDetail = (props) => {
             </style>
             <Layout>
                 <div className="container">
+                    <div className="breadcrumb padding-b-5">
+                        <Link to="/room-details">Retreats</Link>
+                        <span className="seprator"> / </span>
+                        <Link to="/room-details">Retreats Name</Link>
+                    </div>
                     {
                         dummyLoop.map((data, index) =>{
                             return(
