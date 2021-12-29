@@ -39,7 +39,7 @@ const rooms = () => {
                             }
                         </div>
                         <div className="room-bottom-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas mollitia culpa a, earum error eveniet optio, molestias deserunt facere repudiandae architecto. Voluptatibus nemo nobis dolorem, deleniti fugiat eligendi repudiandae quaerat.</div>
-                        <a className="more-retreat" href="/enquire">ENQUIRE</a>
+                        <Link className="more-retreat" to="/enquire">ENQUIRE </Link>
                     </div>
                 </div>
             </Layout>
