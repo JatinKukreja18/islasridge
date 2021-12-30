@@ -705,8 +705,8 @@ footer a {
 }
 .room-shape:before {
   content: '';
-  width: 237px;
-  height: 37px;
+  width: 238px;
+  height: 38px;
   background: #6c6a48;
   display: block;
   position: absolute;
