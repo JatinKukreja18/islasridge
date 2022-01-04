@@ -85,8 +85,7 @@ const Enquire = () => {
         setEnquireForm({...enquireForm, [e.target.name]: e.target.value})
     }
 
-    const dateObject = new Date();
-    const todaysDate = `${dateObject.toISOString().split("T")[0]}`
+    const todaysDate = new Date().toISOString().split("T")[0];
 
     const fromSubmit = (e) =>{
         e.preventDefault()
