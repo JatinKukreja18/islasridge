@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
-import skiLiftChairs from '../images/ski-lift-chairs.jpeg'
-import mountainRange from '../images/mountain-range.jpeg'
-import forrestAerialShot from '../images/forrest-aerial-shot.jpeg'
+// import skiLiftChairs from '../images/ski-lift-chairs.jpeg'
+// import mountainRange from '../images/mountain-range.jpeg'
+// import forrestAerialShot from '../images/forrest-aerial-shot.jpeg'
 
 const About = () => {
   const aboutStaticData = {

@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../components/Layout'
+// import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import HomepageBanner from '../components/HomepageBanner'
-import SplashBanner from '../components/SplashBanner'
+// import HomepageBanner from '../components/HomepageBanner'
+// import SplashBanner from '../components/SplashBanner'
 // import MainContent from '../components/MainContent'
 
 import './../styles/reset.css';
 import './../styles/common.css';
 import './../styles/style.css';
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import Home from './home'
 
 const Homepage = ({data}) => {
