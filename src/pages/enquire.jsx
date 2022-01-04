@@ -86,7 +86,7 @@ const Enquire = () => {
     }
 
     const dateObject = new Date();
-    const todaysDate = `${dateObject.getFullYear()}-${dateObject.getMonth()+1}-${dateObject.getDate()}`
+    const todaysDate = `${dateObject.toISOString().split("T")[0]}`
 
     const fromSubmit = (e) =>{
         e.preventDefault()
