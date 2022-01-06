@@ -135,12 +135,13 @@ const Enquire = () => {
             </style>
             <Layout>
                 <div className="container">
+                    <div class="m-heading text-center">Enquire</div>
                     <div className="flex contact-main">
                         <div className="map">
                             <img src="https://media.istockphoto.com/illustrations/india-map-with-states-grey-illustration-id582277330" alt=""/>
                         </div>
                         <div className="form-container">
-                            <p>
+                            <p className="enquire-email">
                                 For questions email us on info@dummyemail.com. Please fill the form below for any booking related enquiry.
                             </p>
 

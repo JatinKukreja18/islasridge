@@ -39,7 +39,7 @@ const About = () => {
         />
 
         <main className="container">
-          <h1 className="white about-text">{aboutStaticData.title}</h1>
+          <h1 className="white about-text inherit-font">{aboutStaticData.title}</h1>
           <p>{aboutStaticData.description}</p>
           <div>
             {
@@ -177,7 +177,7 @@ const AboutAccordion = (props) => {
         </div>
         {
           toggleState === props.indexNum ?
-            <div className="">
+            <div className="accordion-para">
               {props.aboutData.description}
             </div>
           : false

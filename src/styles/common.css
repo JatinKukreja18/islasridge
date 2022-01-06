@@ -158,3 +158,6 @@ input{
 .img-cover{
   object-fit: cover;
 }
+.inherit-font{
+  font-family: inherit;
+}

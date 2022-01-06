@@ -31,7 +31,7 @@ const tnc = () => {
             </style>
             <Layout>
                 <div className="container">
-                    <h3 className="grey-darker">{tncStaticData.title}</h3>
+                    <h3 className="grey-darker tnc-heading">{tncStaticData.title}</h3>
                     {
                         tncStaticData.tncs.map((data, index) => {
                             return(

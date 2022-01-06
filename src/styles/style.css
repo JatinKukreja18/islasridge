@@ -793,6 +793,9 @@ footer a {
   margin: auto;
   padding-left: 108px;
 }
+.accordion-para {
+  padding: 8px 0px;
+}
 .map{
   width: 50%;
 }
@@ -882,7 +885,7 @@ footer a {
   #nav.show-nav{
     transform: translateX(0%);
   }
-  .about-text,.site-header nav li{
+  .about-text,.site-header nav li,.tnc-heading{
     text-align: center;
   }
   .search-main{
@@ -941,6 +944,10 @@ footer a {
   }
   body .search-icon > svg{
     fill: black;
+  }
+  .enquire-email{
+    margin: 0px;
+    padding: 20px 0px;
   }
 }
 
