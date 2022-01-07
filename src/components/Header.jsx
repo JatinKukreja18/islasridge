@@ -39,7 +39,7 @@ const Header = ({ isHomepage }) => {
   const homepageClass = isHomepage ? 'homepage-header' : ''
   return (
     <header className={`site-header flex flex-between align-v-center ${homepageClass}`}>
-      <div className="logo"><Link to="/">ISLA’S RIDGE</Link></div>
+      <div className="logo flex"><Link to="/">ISLA’S RIDGE</Link></div>
       <nav id="nav" className={`flex align-v-center ${hamMenus ? "show-nav" : ""}`}>
         <ul className="flex">
           {
