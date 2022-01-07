@@ -13,7 +13,7 @@ const rooms = () => {
                     body,.site-header{background-color: #f5f9e5;}
                     *, .site-header a, a{color:black;}
                     .search-icon > svg{fill:black;}
-                    .ham-menus-lines, .ham-menus-lines::before, .ham-menus-lines::after{background-color: black;} 
+                    .ham-menus-lines, .ham-menus::before, .ham-menus::after{background-color: black;} 
                 `}
             </style>
             <Layout>

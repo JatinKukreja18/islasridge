@@ -858,23 +858,35 @@ footer a {
   .site-header nav li{
     margin-right: 0px;
   }
-  .ham-menus-lines,.ham-menus-lines::before,.ham-menus-lines::after {
+  .ham-menus-lines,.ham-menus::before,.ham-menus::after{
     width: 100%;
     height: 1px;
     background-color: white;
     transition: 0.4s;
+    position: relative;
   }
-  .ham-cross .ham-menus-lines, .ham-cross .ham-menus-lines::after,.ham-cross .ham-menus-lines::before{
+  body .ham-cross .ham-menus-lines, body .ham-cross::after, body .ham-cross::before{
     background-color: red;  
   }
-  .ham-menus-lines::before,.ham-menus-lines::after {
+  body .ham-cross .ham-menus-lines{
+    transform: rotate(44deg);
+    top: 7px;
+  }
+  body .ham-cross::before{
+    top: 7px;
+    transform: rotate(-44deg)
+  }
+  body .ham-cross::after{
+    opacity: 0;
+  }
+  .ham-menus::before,.ham-menus::after {
     content: "";
     position: absolute;
   }
-  .ham-menus-lines::before{
+  .ham-menus::before{
     top: 10px;
   }
-  .ham-menus-lines::after{
+  .ham-menus::after{
     top: 20px;
   }
   .ham-menus{
@@ -942,12 +954,20 @@ footer a {
     overflow-x: auto;
     grid-gap: 20px;
   }
+  .room-name{
+    font-size: 28px;
+    line-height: initial;
+    padding: 8px 0px;
+  }
   body .search-icon > svg{
     fill: black;
   }
   .enquire-email{
     margin: 0px;
     padding: 20px 0px;
+  }
+  .retreats-main{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }
 

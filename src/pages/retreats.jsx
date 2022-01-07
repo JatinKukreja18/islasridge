@@ -20,7 +20,7 @@ const retreats = () => {
                 {`
                     body,.site-header{background-color: #FDEDED;}
                     *, .site-header a, a{color:black;}
-                    .ham-menus-lines, .ham-menus-lines::before, .ham-menus-lines::after{background-color: black;} 
+                    .ham-menus-lines, .ham-menus::before, .ham-menus::after{background-color: black;} 
                 `}
             </style>
             <Layout>    
