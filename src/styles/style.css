@@ -241,11 +241,12 @@ body{
   font-size: 24px;
 }
 .banner-main{
-  margin-bottom: 80px;
-  padding-top: 40px;  
+  /* margin-bottom: 80px; */
+  padding-top: 12px;  
 }
 .banner-main > img{
   object-fit: cover;
+  height: 450px;
 }
 .banner-heading {
   font-size: 40px;
