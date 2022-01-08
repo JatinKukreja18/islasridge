@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const tnc = () => {
     const tncStaticData = {
@@ -30,6 +31,10 @@ const tnc = () => {
                 `}
             </style>
             <Layout>
+                <SEO
+                    title="Tnc"
+                    description="Learn more about us who we are and what we do."
+                />
                 <div className="container">
                     <h3 className="grey-darker tnc-heading">{tncStaticData.title}</h3>
                     {

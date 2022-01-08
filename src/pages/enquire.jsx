@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import emailjs from "emailjs-com"
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const contactSelect = [
     {
@@ -134,6 +135,10 @@ const Enquire = () => {
                 `}
             </style>
             <Layout>
+                <SEO
+                    title="Contact Us"
+                    description="Learn more about us who we are and what we do."
+                />
                 <div className="container">
                     <div className="m-heading text-center">Enquire</div>
                     <div className="flex contact-main">

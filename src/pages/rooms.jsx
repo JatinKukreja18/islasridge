@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const rooms = () => {
     return (
@@ -13,6 +14,10 @@ const rooms = () => {
                 `}
             </style>
             <Layout>
+                <SEO
+                    title="Rooms"
+                    description="Learn more about us who we are and what we do."
+                />
                 <div className="container">
                     <div className="m-heading text-center">Rooms</div>
                     <div className="room-container flex">

@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 const retreatsData = [
     {
@@ -24,6 +25,10 @@ const retreats = () => {
                 `}
             </style>
             <Layout>    
+                <SEO
+                    title="Retreats"
+                    description="Learn more about us who we are and what we do."
+                />
                 <div className="container">
                     <div className="m-heading text-center">Retreats</div>
                     <div className="retreats-main padding-t-50">
