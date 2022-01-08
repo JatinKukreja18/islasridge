@@ -616,7 +616,7 @@ footer a {
 }
 .retreats-box {
   padding: 100px 40px 40px 40px;
-  border: 10px solid #cdcdcd;
+  border: 10px solid #b7b29c;
 }
 .retreat-main{
   grid-template-columns: repeat(auto-fit, minmax(calc(50% - 60px), 1fr));
