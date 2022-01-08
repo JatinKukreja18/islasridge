@@ -156,7 +156,7 @@ const AboutAccordion = (props) => {
   return(
     <>
       <div className="accor-main">
-        <div className="flex pointer flex-between align-v-center" onClick={() => toggleAccordion(props.indexNum)}>
+        <div className="flex pointer flex-between align-v-center" onClick={() => toggleAccordion(props.indexNum)} aria-hidden="true">
           <div className="semi-bold font-18">{props.aboutData.title}</div>
           <div className={`flex ${toggleState === props.indexNum ? 'rotate-aero' : ''}`}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" preserveAspectRatio="xMidYMid meet">

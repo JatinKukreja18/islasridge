@@ -227,7 +227,7 @@ const Enquire = () => {
                                             contactSelect.map((data, index) => {
                                                 return(
                                                     <div key={index} className="flex-1 relative select-container">
-                                                        <div onClick={() => selectHeading(index)} className="flex input-field flex-between pointer align-v-center">
+                                                        <div onClick={() => selectHeading(index)} className="flex input-field flex-between pointer align-v-center" aria-hidden="true">
                                                             <div className="select-box-text">{enquireForm[data.name] !== "" ? enquireForm[data.name] : data.title}</div>
                                                             <div className="down-aero">
                                                                 <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
@@ -241,7 +241,7 @@ const Enquire = () => {
                                                                     {
                                                                         data.options.map((options, optionIndex) => {
                                                                             return(
-                                                                                <div onClick={() => customSelect(data.name, options)} key={optionIndex} className="room-list pointer">{options}</div>
+                                                                                <div onClick={() => customSelect(data.name, options)} key={optionIndex} className="room-list pointer" aria-hidden="true" >{options}</div>
                                                                             )
                                                                         })
                                                                     }
