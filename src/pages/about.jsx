@@ -175,12 +175,10 @@ const AboutAccordion = (props) => {
             </svg>
           </div>
         </div>
-        {
-          toggleState === props.indexNum ?
+        {toggleState === props.indexNum &&
             <div className="accordion-para">
               {props.aboutData.description}
             </div>
-          : false
         }
       </div>
     </>

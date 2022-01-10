@@ -151,38 +151,32 @@ const Enquire = () => {
                             </p>
 
                             
-                            {
-                                successMessage ?
-                                    <div className="enquire_sent flex align-v-center padding-b-5">
-                                        <div className="flex padding-r-5">
-                                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                                <g fill="none" fillRule="evenodd">
-                                                    <circle fill="#43A047" fillRule="nonzero" cx="8" cy="8" r="8"/>
-                                                    <path stroke="#FFF" strokeLinecap="round" strokeLinejoin="round" d="m12.75 5-5.385 7L4 8.889"/>
-                                                </g>
-                                            </svg>
-                                        </div>
-                                        Your Enquire has been sent :)
+                            {successMessage &&
+                                <div className="enquire_sent flex align-v-center padding-b-5">
+                                    <div className="flex padding-r-5">
+                                        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                            <g fill="none" fillRule="evenodd">
+                                                <circle fill="#43A047" fillRule="nonzero" cx="8" cy="8" r="8"/>
+                                                <path stroke="#FFF" strokeLinecap="round" strokeLinejoin="round" d="m12.75 5-5.385 7L4 8.889"/>
+                                            </g>
+                                        </svg>
                                     </div>
-                                : false
+                                    Your Enquire has been sent :)
+                                </div>
                             }
 
                             <form action="" onSubmit={fromSubmit}>
                                 <div className="contact-fileds">
                                     <input onChange={checkInput} value={enquireForm.name} className="input-field" type="text" name="name" id="name" placeholder="Name" />
-                                    {
-                                        formErrors.name !== undefined ? 
-                                            <div className="error-message">{formErrors.name}</div>
-                                        : false
+                                    {formErrors.name &&
+                                        <div className="error-message">{formErrors.name}</div>
                                     }
                                 </div>
 
                                 <div className="contact-fileds">
                                     <input onChange={checkInput} value={enquireForm.email} className="input-field" type="text" name="email" id="email" placeholder="E-mail" />
-                                    {
-                                        formErrors.email !== undefined ? 
-                                            <div className="error-message">{formErrors.email}</div>
-                                        : false
+                                    {formErrors.email &&
+                                        <div className="error-message">{formErrors.email}</div>
                                     }
                                 </div>
 
@@ -198,11 +192,9 @@ const Enquire = () => {
                                                     </svg>
                                                 </div>
                                             </div>
-                                                {
-                                                    formErrors.from !== undefined ? 
-                                                        <div className="error-message">{formErrors.from}</div>
-                                                    : false
-                                                }
+                                            {formErrors.from &&
+                                                <div className="error-message">{formErrors.from}</div>
+                                            }
                                         </div>
 
                                         <div className="flex-1">
@@ -215,11 +207,9 @@ const Enquire = () => {
                                                     </svg>
                                                 </div>
                                             </div>
-                                                {
-                                                    formErrors.to !== undefined ? 
-                                                        <div className="error-message">{formErrors.to}</div>
-                                                    : false
-                                                }
+                                            {formErrors.to &&
+                                                <div className="error-message">{formErrors.to}</div>
+                                            }
                                         </div>
                                     </div>
                                     <div className="contact-fileds select-box-main">
@@ -235,23 +225,19 @@ const Enquire = () => {
                                                                 </svg>
                                                             </div>
                                                         </div>
-                                                        {
-                                                            selectShow === index ? 
-                                                                <div className="room-list-main absolute">
-                                                                    {
-                                                                        data.options.map((options, optionIndex) => {
-                                                                            return(
-                                                                                <div onClick={() => customSelect(data.name, options)} key={optionIndex} className="room-list pointer" aria-hidden="true" >{options}</div>
-                                                                            )
-                                                                        })
-                                                                    }
-                                                                </div>
-                                                            : false
+                                                        { selectShow === index &&
+                                                            <div className="room-list-main absolute">
+                                                                {
+                                                                    data.options.map((options, optionIndex) => {
+                                                                        return(
+                                                                            <div onClick={() => customSelect(data.name, options)} key={optionIndex} className="room-list pointer" aria-hidden="true" >{options}</div>
+                                                                        )
+                                                                    })
+                                                                }
+                                                            </div>
                                                         }
-                                                        {
-                                                            formErrors[data.name] !== undefined ? 
-                                                                <div className="error-message">{formErrors[data.name]}</div>
-                                                            : false
+                                                        {formErrors[data.name] &&
+                                                            <div className="error-message">{formErrors[data.name]}</div>
                                                         }
                                                     </div>
                                                 )
@@ -263,10 +249,8 @@ const Enquire = () => {
 
                                 <div className="contact-fileds">
                                     <textarea onChange={checkInput} value={enquireForm.message} className="input-field message-box" name="message" placeholder="Message" rows="4"></textarea>
-                                    {
-                                        formErrors.message !== undefined ? 
-                                            <div className="error-message">{formErrors.message}</div>
-                                        : false
+                                    { formErrors.message &&
+                                        <div className="error-message">{formErrors.message}</div>
                                     }
                                 </div>
 
