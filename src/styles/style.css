@@ -803,11 +803,17 @@ footer a {
   padding-left: 108px;
 }
 .accordion-para {
-  padding: 8px 0px;
   font-size: 18px;
+  overflow: hidden;
+}
+.show-accordion-para{
+  padding: 8px 0px;
 }
 .accor-heading{
   font-size: 20px;
+}
+.accor-aero,.accordion-para{
+  transition: 0.3s;
 }
 .map{
   width: 50%;

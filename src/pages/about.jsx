@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 // import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -147,10 +147,14 @@ const About = () => {
 
 export default About
 
+
 const AboutAccordion = (props) => {
-  const [toggleState, setToggleState] = useState(null)
+  const elementRef = useRef("");
+  const [toggleHeight, setToggleHeight] = useState("");
+  const [toggleState, setToggleState] = useState("");
   const toggleAccordion = (index) =>{
-    toggleState === index ? setToggleState(null) : setToggleState(index);
+    toggleState === index ? setToggleState("") : setToggleState(index);
+    setToggleHeight(`${elementRef.current.scrollHeight + 16}px`);
   }
 
   return(
@@ -158,7 +162,7 @@ const AboutAccordion = (props) => {
       <div className="accor-main">
         <div className="flex pointer flex-between align-v-center" onClick={() => toggleAccordion(props.indexNum)} aria-hidden="true">
           <div className="semi-bold accor-heading">{props.aboutData.title}</div>
-          <div className={`flex ${toggleState === props.indexNum ? 'rotate-aero' : ''}`}>
+          <div className={`flex accor-aero ${toggleState === props.indexNum ? 'rotate-aero' : ''}`}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <clipPath id="__lottie_element_2">
@@ -175,11 +179,15 @@ const AboutAccordion = (props) => {
             </svg>
           </div>
         </div>
-        {toggleState === props.indexNum &&
-            <div className="accordion-para">
-              {props.aboutData.description}
-            </div>
-        }
+
+        <div className={`accordion-para ${toggleState === props.indexNum ? 'show-accordion-para' : ''}`} 
+          ref={elementRef} style={{
+            height: `${toggleState === props.indexNum ? toggleHeight : '0px'}`,
+          }}
+          >
+          {props.aboutData.description}
+        </div>
+
       </div>
     </>
   )
