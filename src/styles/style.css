@@ -1,10 +1,15 @@
 /* General */
 @import url(https://use.typekit.net/jqs8oav.css);
+html{
+  position: relative;
+  min-height: 100%;
+}
 body{
   font-family: gitan-latin, sans-serif;
   font-family: gill-sans-nova, sans-serif;
   font-style: normal;
   font-weight: 400;
+  margin-bottom: 64px;
 }
 *{
   box-sizing: border-box;
@@ -242,7 +247,7 @@ body{
 }
 .banner-main{
   /* margin-bottom: 80px; */
-  padding-top: 12px;  
+  /* padding-top: 12px;   */
 }
 .banner-main > img{
   object-fit: cover;
@@ -366,6 +371,9 @@ footer {
   font-size: 16px;
   /* font-style: italic; */
   text-align: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 footer p {
   border-top: 1px solid #DADADA;
