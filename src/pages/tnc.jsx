@@ -26,7 +26,7 @@ const tnc = () => {
             <style>
                 {`
                     body,.site-header{background-color: #F5F9E3;}
-                    *, .site-header a, a{color:black;}
+                    body *, .site-header a, a{color: #442220;}
                     .ham-menus-lines, .ham-menus::before, .ham-menus::after{background-color: black;} 
                 `}
             </style>
@@ -36,13 +36,13 @@ const tnc = () => {
                     description="Learn more about us who we are and what we do."
                 />
                 <div className="container">
-                    <h3 className="grey-darker tnc-heading">{tncStaticData.title}</h3>
+                    <h3 className="tnc-heading">{tncStaticData.title}</h3>
                     {
                         tncStaticData.tncs.map((data, index) => {
                             return(
                                 <div key={index}>
-                                    <h3 className="grey-darker margin-b-0 padding-b-5">{data.title}</h3>
-                                    <p className="grey-darker">{data.description}</p>
+                                    <h3 className=" margin-b-0 padding-b-5">{data.title}</h3>
+                                    <p className="">{data.description}</p>
                                 </div>
                             )
                         })

@@ -47,7 +47,7 @@ const press = () => {
             <style>
                 {`
                     body,.site-header{background-color: #FDEDED;}
-                    *, .site-header a, a{color:black;}
+                    *, .site-header a, a{color: #442220;}
                     .ham-menus-lines, .ham-menus::before, .ham-menus::after{background-color: black;} 
                 `}
             </style>
