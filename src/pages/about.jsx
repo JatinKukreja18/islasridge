@@ -40,7 +40,7 @@ const About = () => {
 
         <main className="container">
           <h1 className="white about-text inherit-font">{aboutStaticData.title}</h1>
-          <p>{aboutStaticData.description}</p>
+          <p className="about-description">{aboutStaticData.description}</p>
           <div>
             {
               aboutStaticData.accordion.map((data, index) =>{
@@ -157,7 +157,7 @@ const AboutAccordion = (props) => {
     <>
       <div className="accor-main">
         <div className="flex pointer flex-between align-v-center" onClick={() => toggleAccordion(props.indexNum)} aria-hidden="true">
-          <div className="semi-bold font-18">{props.aboutData.title}</div>
+          <div className="semi-bold accor-heading">{props.aboutData.title}</div>
           <div className={`flex ${toggleState === props.indexNum ? 'rotate-aero' : ''}`}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20" height="20" preserveAspectRatio="xMidYMid meet">
               <defs>

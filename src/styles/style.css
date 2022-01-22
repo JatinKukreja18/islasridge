@@ -804,6 +804,10 @@ footer a {
 }
 .accordion-para {
   padding: 8px 0px;
+  font-size: 18px;
+}
+.accor-heading{
+  font-size: 20px;
 }
 .map{
   width: 50%;
@@ -838,6 +842,10 @@ footer a {
   margin-bottom: 0px;
   border-bottom: 0px;
 }
+.about-description{
+  font-size: 19px;
+}
+
 @media(min-width:670px){
   .ham-menus,.overlay,.m-heading{display: none;} 
 }
