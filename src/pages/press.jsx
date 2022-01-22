@@ -65,7 +65,7 @@ const press = () => {
                                 return(
                                     <Link href="https://www.google.com/" target="_blank" className="press-box text-center" key={index}>
                                         <h5 className="press-title white">{data.title}</h5>
-                                        <p className="margin-b-0 white">"{data.description}"</p>
+                                        <p className="margin-b-0 white blog-para">"{data.description}"</p>
                                     </Link>
                                 )
                             })
