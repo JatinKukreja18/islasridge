@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import Layout from '../layouts/index'
+// import Layout from '../layouts/index'
+import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 const rooms = () => {
@@ -20,7 +21,7 @@ const rooms = () => {
                 />
                 <div className="container">
                     <div className="m-heading text-center">Rooms</div>
-                    <div className="room-container flex">
+                    <div className="room-container flex flex-center">
                         <div className="relative cover-box">
                             <div className="room-shape"></div>
                             <div className="room-main">

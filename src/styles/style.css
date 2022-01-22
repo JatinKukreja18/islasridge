@@ -704,11 +704,11 @@ footer a {
   flex: 1;
 }
 .room-container {
-  margin: 200px 0px;
+  margin: 200px 70px 0px 0px;
 }
 .room-shape {
   width: 100%;
-  height: 38px;
+  height: 46px;
   background-color: white;
   position: relative;
 }
@@ -718,7 +718,7 @@ footer a {
 .room-shape:before {
   content: '';
   width: 238px;
-  height: 38px;
+  height: 46px;
   background: #6c6a48;
   display: block;
   position: absolute;
@@ -769,6 +769,7 @@ footer a {
 .room-box {
   text-align: center;
   padding: 22px;
+  height: 73px;
 }
 .room-box:hover{
   color: #FEBB21;
@@ -970,6 +971,9 @@ footer a {
     width: 100%;
     display: block;
     font-size: 28px;
+  }
+  .room-box{
+    height: unset;
   }
   .cover-box:first-child{ 
     margin-right: 0px;
