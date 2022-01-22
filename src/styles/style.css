@@ -23,6 +23,27 @@ body{
   margin-bottom: 3.75rem;
 }
 
+.error-page *{
+  color: #442220;
+}
+.error-text{
+  font-size: 36px;
+  line-height: normal;
+  font-weight: 500;
+}
+.error-text-page{
+  line-height: 39px;
+}
+.to-home {
+  border: 1px solid;
+  padding: 2px 10px;
+}
+.error-page {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 38%;
+}
 /* Header */
 .site-header,footer {
   /* height: 30px; */
@@ -920,6 +941,13 @@ footer a {
     width: 30px;
     height: 22px;
     z-index: 1;
+  }
+  .error-page{
+    position: unset;
+    transform: unset;
+  }
+  .error-text{
+    font-size: 28px;
   }
   #nav.show-nav{
     transform: translateX(0%);
