@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import { Link } from 'gatsby'
 
 const presssData = [
     {
@@ -62,10 +63,10 @@ const press = () => {
                         {
                             presssData.map((data, index) => {
                                 return(
-                                    <div className="press-box text-center" key={index}>
+                                    <Link href="https://www.google.com/" target="_blank" className="press-box text-center" key={index}>
                                         <h5 className="press-title white">{data.title}</h5>
                                         <p className="margin-b-0 white">"{data.description}"</p>
-                                    </div>
+                                    </Link>
                                 )
                             })
                         }
