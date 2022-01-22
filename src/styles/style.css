@@ -539,7 +539,7 @@ footer a {
 }
 @media (max-width: 767px){
   body{
-    height: 100vh;  max-height: -webkit-fill-available; 
+    /* height: 100vh;  max-height: -webkit-fill-available;  */
   }
   #___gatsby,#gatsby-focus-wrapper,
   .splash-banner{
@@ -979,8 +979,8 @@ footer a {
     transition-delay: 0.1s;
     visibility: unset;
   }
-  .press-main{
-    grid-gap: 30px;    
+  body .press-main{
+    grid-gap: 20px;    
   }
   .m-heading {
     font-size: 24px;
