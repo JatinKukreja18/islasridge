@@ -33,10 +33,10 @@ body{
   color: #484d52;
   /* font-weight: 700; */
 }
-#nav a.active-menu {
+.active-menu {
   color: #FEBB21;
 }
-.site-header nav a:hover {
+.site-header nav a:hover, .tnc-footer:hover {
   color: #FEBB21;
 }
 .homepage-header.site-header,
