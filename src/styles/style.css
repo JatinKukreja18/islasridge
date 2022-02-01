@@ -754,7 +754,7 @@ footer a {
   position: relative;
 }
 .room-shape, .room-shape:before {
-  clip-path: polygon(28% 0%, 71% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(28% 0%, 72% 0%, 100% 100%, 0% 100%);
 }
 .room-shape:before {
   content: '';
@@ -880,6 +880,16 @@ footer a {
 }
 .contact-fileds {
   padding-bottom: 10px;
+}
+
+body::-webkit-scrollbar{
+	width: 10px;
+  background-color: #e8e8e8;
+}
+
+body::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+  background-color: #adadad;
 }
 .search-input{
   border: none;
