@@ -10,8 +10,8 @@ const rooms = () => {
             <style>
                 {`
                     body,.site-header{background-color: #6C6A48;}
-                    *, .site-header a, a{color:#F6FAE6;}
-                    .search-icon > svg{fill:#F6FAE6;}
+                    *, .site-header a, a{color:#f5f9e5;}
+                    .search-icon > svg{fill:#f5f9e5;}
                 `}
             </style>
             <Layout>
