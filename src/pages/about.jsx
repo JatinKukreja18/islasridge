@@ -23,8 +23,8 @@ const About = () => {
       <style>
           {`
               body,.site-header{background-color: #6C6A48;}
-              *, .site-header a, a{color:white;}
-              .search-icon > svg{fill:white;}
+              *, .site-header a, a{color:#F6FAE6;}
+              .search-icon > svg{fill:#F6FAE6;}
           `}
       </style>
       <Layout>
