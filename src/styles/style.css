@@ -832,10 +832,12 @@ footer a {
   padding-right: 4px;
 }
 .submit-btn {
-  background-color: black;
+  background-color: #442220;
   border: none;
-  padding: 5px 14px;
+  padding: 5px 17px;
   outline: none;
+  color: #FDEFEF;
+  font-weight: 500;
 }
 .input-field::placeholder{
   color: #442220;
@@ -845,7 +847,7 @@ footer a {
   margin-right: 70px;
 }
 .input-field {
-  border: 1px solid;
+  border: 1px solid #442220;
   outline: none;
   background-color: unset;
   width: 100%;

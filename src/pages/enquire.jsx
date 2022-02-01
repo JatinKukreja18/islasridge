@@ -256,7 +256,7 @@ const Enquire = () => {
                                         <div className="error-message">{formErrors.message}</div>
                                     }
                                 </div>
-
+                                    
                                 <button className="submit-btn white pointer" type="submit">{textLoading ? "SENDING" : "SEND"}</button>
                             </form>
                         </div>
