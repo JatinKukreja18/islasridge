@@ -15,7 +15,7 @@ const Footer = () => (
       <div className="margin-b-0 flex padding-r-5">
         <Link className="tnc-footer" activeClassName="active-menu" to="/tnc">Terms & Conditions</Link> 
       </div>
-      <div>&copy; 2021</div> &nbsp;
+      <div>&copy; 2022</div> &nbsp;
       {/* <a className="padding-left" href="mailto:islasridge@gmail.com">islasridge@gmail.com</a> */}
     </div>
   </footer>

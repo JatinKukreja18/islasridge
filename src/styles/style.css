@@ -57,7 +57,7 @@ body{
   color: #484d52;
   /* font-weight: 700; */
 }
-.active-menu {
+#nav .active-menu,.active-menu {
   color: #FEBB21;
 }
 .site-header nav a:hover, .tnc-footer:hover {
