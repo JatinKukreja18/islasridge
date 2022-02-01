@@ -823,6 +823,14 @@ footer a {
 .room-box:first-child{
   border-right: 1px solid #F6FAE6;
 }
+.enquire-email {
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 500;
+}
+.down-aero {
+  padding-right: 4px;
+}
 .submit-btn {
   background-color: black;
   border: none;
