@@ -812,6 +812,7 @@ footer a {
   text-align: center;
   padding: 22px;
   height: 73px;
+  font-weight: 500;
 }
 .room-box:hover{
   color: #FEBB21;
