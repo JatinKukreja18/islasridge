@@ -648,8 +648,10 @@ footer a {
   font-size: 20px;
 }
 .more-retreat {
-  border: 1px solid; 
-  padding: 2px 20px;
+  border: 1px solid;
+  padding: 0px 12px;
+  display: inline-block;
+  line-height: 24px;
 }
 .retreats-box {
   padding: 100px 40px 40px 40px;
@@ -663,9 +665,11 @@ footer a {
 }
 .retrea-desc{
   padding: 30px 0px;
+  font-size: 17px;
+  font-weight: 500;
 }
 .retrea-title{
-  font-size: 40px;
+  font-size: 42px;
 }
 
 .press-title {
