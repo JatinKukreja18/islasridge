@@ -14,6 +14,9 @@ body{
 *{
   box-sizing: border-box;
 }
+.about-container * {
+  color: #f7ede9;
+}
 .container{
   max-width: 980px;
   margin: 86px auto auto auto;
@@ -828,14 +831,11 @@ footer a {
   padding-left: 108px;
 }
 .accordion-para {
-  font-size: 18px;
+  font-size: 20px;
   overflow: hidden;
 }
-.show-accordion-para{
-  padding: 8px 0px;
-}
 .accor-heading{
-  font-size: 20px;
+  font-size: 21px;
 }
 .accor-aero,.accordion-para{
   transition: 0.3s;
@@ -866,15 +866,22 @@ footer a {
   padding: 10px 5px;
   border-bottom: 1px solid;
 }
-.rotate-aero{
+
+.expand-section{
+  border: unset;
+}
+.expand-section .accor-aero{
   transform: rotate(180deg);
+}
+.expand-section .accordion-para{
+  padding: 8px 0px;
 }
 .accor-main:first-child{
   margin-bottom: 0px;
   border-bottom: 0px;
 }
 .about-description{
-  font-size: 19px;
+  font-size: 21px;
 }
 
 @media(min-width:670px){
