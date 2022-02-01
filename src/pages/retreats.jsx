@@ -6,7 +6,7 @@ import SEO from '../components/SEO'
 const retreatsData = [
     {
         title: "A la carte",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit."
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit."
     },
     {
         title: "Table d'hote",
