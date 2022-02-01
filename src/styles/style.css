@@ -781,6 +781,7 @@ footer a {
 }
 .breadcrumb, .breadcrumb * {
   color: #FEBB21;
+  font-size: 16px;
 }
 .seprator{
   padding: 0px 4px;
