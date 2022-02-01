@@ -649,9 +649,10 @@ footer a {
 }
 .more-retreat {
   border: 1px solid;
-  padding: 0px 12px;
+  padding: 0px 10px;
   display: inline-block;
-  line-height: 24px;
+  line-height: 23px;
+  font-weight: 500;
 }
 .retreats-box {
   padding: 100px 40px 40px 40px;
