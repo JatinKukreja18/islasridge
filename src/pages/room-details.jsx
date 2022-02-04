@@ -26,15 +26,15 @@ const rooms = (props) => {
                             <span className="seprator"> / </span>
                             <span>{pageData.breadcrumbTitle}</span>
                         </div>
-                        <img className="full-width" src={RoomMainBanner} alt="" />
+                        <img className="full-width img-cover" src={pageData.featuredImage} height="455" alt="" /> 
                         <h5 className="room-name">{pageData.roomHeading}</h5>
                         <p>{pageData.roomPara}</p>
                         <div className="room-img-main">
                             {
-                                dummyLoop.map((data, index) =>{
+                                pageData.roomsGallery.map((data, index) =>{
                                     return(
                                         <div className="room-img" key={index}>
-                                            <img className="full-width" src={RoomImg} alt="" />
+                                            <img className="full-width img-cover" src={data} height="282" alt="" />
                                         </div>
                                     )
                                 })

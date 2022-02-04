@@ -3,6 +3,12 @@ import React from 'react'
 // import Layout from '../layouts/index'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import featuredRoomImage from '../images/featurebRooms.jpeg'
+import roomImage1 from '../images/roomImage1.jpeg'
+import roomImage2 from '../images/roomImage2.jpeg'
+import roomImage3 from '../images/roomImage3.jpeg'
+import roomImage4 from '../images/roomImage4.jpeg'
+import roomImage5 from '../images/roomImage5.jpeg'
 
 const rooms = () => {
     const roomsData = [
@@ -12,15 +18,11 @@ const rooms = () => {
             code: "indogo-room",
             nextPageData: {
                 breadcrumbTitle: "Indogo Room",
-                featuredImage: "",
+                featuredImage: featuredRoomImage,
                 roomHeading: "Indogo Room",
                 roomPara: "Isla’s Ridge comprises two dwellings, with a total of five rooms. The Indigo room is a spacious room of ~226 sq ft. with a king size bed which can be separated into two single beds.  A writer’s desk overlooks an exceptional view of the ridge and land. ",
                 roomDescription: "Rooms at Isla’s Ridge are intentionally devoid of a TV, phones and wifi is spotty at best. No, we do not feel this is necessary to solve for. All rooms include access to the pool, garden and a large library with over 300 cookbooks.",
-                roomsGallery: [
-                    {
-                        imgage: ""
-                    },
-                ]
+                roomsGallery: [roomImage1,roomImage2,roomImage3,roomImage4,roomImage5]
             }
         },
         {
@@ -29,15 +31,11 @@ const rooms = () => {
             code: "mango-room",
             nextPageData: {
                 breadcrumbTitle: "Mango Room",
-                featuredImage: "",
+                featuredImage: featuredRoomImage,
                 roomHeading: "Mango Room",
                 roomPara: "Isla’s Ridge comprises two dwellings, with a total of five rooms. The Mango room is ~248 sq. ft. with a king size bed, which can be separated into two beds.",
                 roomDescription: "Rooms at Isla’s Ridge are intentionally devoid of a TV, phones and wifi is spotty at best. No, we do not feel this is necessary to solve for. All rooms include access to the pool, garden and a large library with over 300 cookbooks.",
-                roomsGallery: [
-                    {
-                        imgage: ""
-                    },
-                ]
+                roomsGallery: [roomImage1,roomImage2,roomImage3,roomImage4,roomImage5]
             }
         },
         {
@@ -46,15 +44,11 @@ const rooms = () => {
             code: "saga-room",
             nextPageData: {
                 breadcrumbTitle: "Saga Room",
-                featuredImage: "",
+                featuredImage: featuredRoomImage,
                 roomHeading: "Saga Room",
                 roomPara: "Isla’s Ridge comprises two dwellings, with a total of five rooms. The Grey room is the largest room, occupying the entire ground floor. At ~280 sq. ft., it features a king size bed, which can be separated into two beds, a walk-in wardrobe and private veranda on the ridge. ",
                 roomDescription: "Rooms at Isla’s Ridge are intentionally devoid of a TV, phones and wifi is spotty at best. No, we do not feel this is necessary to solve for. All rooms include access to the pool, garden and a large library with over 300 cookbooks.",
-                roomsGallery: [
-                    {
-                        imgage: ""
-                    },
-                ]
+                roomsGallery: [roomImage1,roomImage2,roomImage3,roomImage4,roomImage5]
             }
         },
         {
@@ -63,15 +57,11 @@ const rooms = () => {
             code: "chunna-room",
             nextPageData: {
                 breadcrumbTitle: "Chunna Room",
-                featuredImage: "",
+                featuredImage: featuredRoomImage,
                 roomHeading: "Chunna Room",
                 roomPara: "Isla’s Ridge comprises two dwellings, with a total of five rooms. The Chunna room is the same size as the Mango room and features a ridge view.  At ~248 sq. ft., it features a King size bed which can be separated into two single beds. The rising sun can be viewed from a perfectly placed writer’s desk. ",
                 roomDescription: "Rooms at Isla’s Ridge are intentionally devoid of a TV, phones and wifi is spotty at best. No, we do not feel this is necessary to solve for. All rooms include access to the pool, garden and a large library with over 300 cookbooks.",
-                roomsGallery: [
-                    {
-                        imgage: ""
-                    },
-                ]
+                roomsGallery: [roomImage1,roomImage2,roomImage3,roomImage4,roomImage5]
             }
         },
         {
@@ -80,15 +70,11 @@ const rooms = () => {
             code: "grey-room",
             nextPageData: {
                 breadcrumbTitle: "Grey Room",
-                featuredImage: "",
+                featuredImage: featuredRoomImage,
                 roomHeading: "Grey Room",
                 roomPara: "Isla’s Ridge comprises two dwellings, with a total of five rooms. The Sage room is the same size as Indigo room and features a ridge view.  At ~226 sq. ft., it features a King size bed which can be separated into two single beds.",
                 roomDescription: "Rooms at Isla’s Ridge are intentionally devoid of a TV, phones and wifi is spotty at best. No, we do not feel this is necessary to solve for. All rooms include access to the pool, garden and large library with over 300 cookbooks.",
-                roomsGallery: [
-                    {
-                        imgage: ""
-                    },
-                ]
+                roomsGallery: [roomImage1,roomImage2,roomImage3,roomImage4,roomImage5]
             }
         }
     ]
