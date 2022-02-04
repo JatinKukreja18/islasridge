@@ -6,7 +6,7 @@ import RoomImg from '../images/roomSub.png'
 
 const dummyLoop = [0, 1, 2, 3, 4, 5]
 const rooms = (props) => {
-    console.log(props)
+    const pageData = props.location.state.pageData
     return (
         <>
             <style>
@@ -23,11 +23,11 @@ const rooms = (props) => {
                         <div className="breadcrumb padding-b-5">
                             <Link to="/rooms">Rooms</Link>
                             <span className="seprator"> / </span>
-                            <span>Room Name</span>
+                            <span>{pageData.breadcrumbTitle}</span>
                         </div>
                         <img className="full-width" src={RoomMainBanner} alt="" />
-                        <h5 className="room-name">Saga Room</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sequi officia fugiat earum in veniam quod aut voluptates magnam natus, voluptas qui ut blanditiis dolor? Numquam quia veritatis voluptatibus minima?</p>
+                        <h5 className="room-name">{pageData.roomHeading}</h5>
+                        <p>{pageData.roomDescription}</p>
                         <div className="room-img-main">
                             {
                                 dummyLoop.map((data, index) =>{

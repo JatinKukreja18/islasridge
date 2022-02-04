@@ -113,7 +113,7 @@ const rooms = () => {
                                     roomsData.map((data, index) =>{
                                         if(data.firstBox){
                                             return(
-                                                <Link key={index} to={`/room/${data.code}`} className="room-box">{data.name}</Link>
+                                                <Link key={index} to={`/room/${data.code}`} state={{pageData: data.nextPageData}} className="room-box">{data.name}</Link>
                                             )
                                         }
                                     })
@@ -129,7 +129,7 @@ const rooms = () => {
                                     roomsData.map((data, index) =>{
                                         if(!data.firstBox){
                                             return(
-                                                <Link key={index} to={`/room/${data.code}`} className="room-box">{data.name}</Link>
+                                                <Link key={index} to={`/room/${data.code}`} state={{pageData: data.nextPageData}} className="room-box">{data.name}</Link>
                                             )
                                         }
                                     })
