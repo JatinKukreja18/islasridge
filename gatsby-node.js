@@ -7,9 +7,9 @@ exports.onCreatePage = async ({ page, actions }) => {
     console.log("Page - ", page.path)
     if (page.path.match(/^\/retreat/)) {
        createPage({
-           path: '/retreat/',
-           matchPath: '/retreat/:name/',
-           component: path.resolve('./src/pages/retreat-detail.jsx'),
+           path: '/retreat/*',
+           matchPath: '/retreat/:name',
+           component: path.resolve(`src/pages/retreat-detail.jsx`),
        }) 
     }
     

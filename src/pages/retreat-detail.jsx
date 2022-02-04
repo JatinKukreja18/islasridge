@@ -22,9 +22,10 @@ const RetreatDetail = (props) => {
                     <div className="breadcrumb padding-b-5">
                         <Link to="/retreats">Retreats</Link>
                         <span className="seprator"> / </span>
-                        <span>{pageData.breadcrumbTitle}</span>
+                        <span className="added">{pageData.breadcrumbTitle}</span>
                     </div>
                     {
+                        console.log(pageData.listRetreats),
                         pageData.listRetreats.map((data, index) =>{
                             return(
                                 <div className="retreat-main" key={index}>
