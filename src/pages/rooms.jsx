@@ -5,6 +5,90 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 
 const rooms = () => {
+    const roomsData = [
+        {
+            firstBox: true,
+            name: "INDOGO",
+            code: "indogo-room",
+            nextPageData: {
+                breadcrumbTitle: "Indogo Room",
+                featuredImage: "",
+                roomHeading: "Indogo Room",
+                roomDescription: "Are you a teacher looking to host a series of workshops? A patron looking to sponsor an art residency?  Are you an employer looking to have colleagues grow from time together, or a family looking to reunite? We welcome all.",
+                listRoom: [
+                    {
+                        imgage: ""
+                    },
+                ]
+            }
+        },
+        {
+            firstBox: true,
+            name: "MANGO",
+            code: "mango-room",
+            nextPageData: {
+                breadcrumbTitle: "Mango Room",
+                featuredImage: "",
+                roomHeading: "Mango Room",
+                roomDescription: "Are you a teacher looking to host a series of workshops? A patron looking to sponsor an art residency?  Are you an employer looking to have colleagues grow from time together, or a family looking to reunite? We welcome all.",
+                listRoom: [
+                    {
+                        imgage: ""
+                    },
+                ]
+            }
+        },
+        {
+            firstBox: false,
+            name: "SAGE",
+            code: "saga-room",
+            nextPageData: {
+                breadcrumbTitle: "Saga Room",
+                featuredImage: "",
+                roomHeading: "Saga Room",
+                roomDescription: "Are you a teacher looking to host a series of workshops? A patron looking to sponsor an art residency?  Are you an employer looking to have colleagues grow from time together, or a family looking to reunite? We welcome all.",
+                listRoom: [
+                    {
+                        imgage: ""
+                    },
+                ]
+            }
+        },
+        {
+            firstBox: false,
+            name: "CHUNNA",
+            code: "Chunna-room",
+            nextPageData: {
+                breadcrumbTitle: "Chunna Room",
+                featuredImage: "",
+                roomHeading: "Chunna Room",
+                roomDescription: "Are you a teacher looking to host a series of workshops? A patron looking to sponsor an art residency?  Are you an employer looking to have colleagues grow from time together, or a family looking to reunite? We welcome all.",
+                listRoom: [
+                    {
+                        imgage: ""
+                    },
+                ]
+            }
+        },
+        {
+            firstBox: false,
+            name: "GREY",
+            code: "grey-room",
+            nextPageData: {
+                breadcrumbTitle: "Grey Room",
+                featuredImage: "",
+                roomHeading: "Grey Room",
+                roomDescription: "Are you a teacher looking to host a series of workshops? A patron looking to sponsor an art residency?  Are you an employer looking to have colleagues grow from time together, or a family looking to reunite? We welcome all.",
+                listRoom: [
+                    {
+                        imgage: ""
+                    },
+                ]
+            }
+        }
+    ]
+
+    console.log(roomsData)
     return (
         <>
             <style>
@@ -25,18 +109,31 @@ const rooms = () => {
                         <div className="relative cover-box">
                             <div className="room-shape"></div>
                             <div className="room-main">
-                                <Link to="/room-details" className="room-box">INDIGO</Link>
-                                <Link to="/room-details" className="room-box">MANGO</Link>
-                                <Link to="/room-details" className="room-box">MANGO</Link>
+                                {
+                                    roomsData.map((data, index) =>{
+                                        if(data.firstBox){
+                                            return(
+                                                <Link key={index} to="/room-details" className="room-box">{data.name}</Link>
+                                            )
+                                        }
+                                    })
+                                }
+                                <div className="room-box"></div>
                             </div>
                         </div>
 
                         <div className="relative cover-box">
                             <div className="room-shape"></div>
                             <div className="room-main">
-                                <Link to="/room-details" className="room-box">SAGE</Link>
-                                <Link to="/room-details" className="room-box">CHUNNA</Link>
-                                <Link to="/room-details" className="room-box">GREY</Link>
+                                {
+                                    roomsData.map((data, index) =>{
+                                        if(!data.firstBox){
+                                            return(
+                                                <Link key={index} to="/room-details" className="room-box">{data.name}</Link>
+                                            )
+                                        }
+                                    })
+                                }
                             </div>
                         </div>
                     </div>
