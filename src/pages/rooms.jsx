@@ -57,7 +57,7 @@ const rooms = () => {
         {
             firstBox: false,
             name: "CHUNNA",
-            code: "Chunna-room",
+            code: "chunna-room",
             nextPageData: {
                 breadcrumbTitle: "Chunna Room",
                 featuredImage: "",
@@ -113,7 +113,7 @@ const rooms = () => {
                                     roomsData.map((data, index) =>{
                                         if(data.firstBox){
                                             return(
-                                                <Link key={index} to="/room-details" className="room-box">{data.name}</Link>
+                                                <Link key={index} to={`/room/${data.code}`} className="room-box">{data.name}</Link>
                                             )
                                         }
                                     })
@@ -129,7 +129,7 @@ const rooms = () => {
                                     roomsData.map((data, index) =>{
                                         if(!data.firstBox){
                                             return(
-                                                <Link key={index} to="/room-details" className="room-box">{data.name}</Link>
+                                                <Link key={index} to={`/room/${data.code}`} className="room-box">{data.name}</Link>
                                             )
                                         }
                                     })

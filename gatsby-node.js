@@ -12,5 +12,13 @@ exports.onCreatePage = async ({ page, actions }) => {
            component: path.resolve(`src/pages/retreat-detail.jsx`),
        }) 
     }
+
+    if (page.path.match(/^\/room/)) {
+        createPage({
+            path: '/room/*',
+            matchPath: '/room/:name',
+            component: path.resolve(`src/pages/room-details.jsx`),
+        }) 
+     }
     
   }

@@ -5,7 +5,8 @@ import RoomMainBanner from '../images/roomMain.png'
 import RoomImg from '../images/roomSub.png'
 
 const dummyLoop = [0, 1, 2, 3, 4, 5]
-const rooms = () => {
+const rooms = (props) => {
+    console.log(props)
     return (
         <>
             <style>
@@ -20,9 +21,9 @@ const rooms = () => {
                 <div className="container">
                     <div className="full-banner">
                         <div className="breadcrumb padding-b-5">
-                            <Link to="/room-details">Rooms</Link>
+                            <Link to="/rooms">Rooms</Link>
                             <span className="seprator"> / </span>
-                            <Link to="/room-details">Room Name</Link>
+                            <span>Room Name</span>
                         </div>
                         <img className="full-width" src={RoomMainBanner} alt="" />
                         <h5 className="room-name">Saga Room</h5>
