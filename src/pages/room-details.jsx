@@ -7,6 +7,7 @@ import RoomImg from '../images/roomSub.png'
 const dummyLoop = [0, 1, 2, 3, 4, 5]
 const rooms = (props) => {
     const pageData = props.location.state.pageData
+    console.log(pageData)
     return (
         <>
             <style>
@@ -27,7 +28,7 @@ const rooms = (props) => {
                         </div>
                         <img className="full-width" src={RoomMainBanner} alt="" />
                         <h5 className="room-name">{pageData.roomHeading}</h5>
-                        <p>{pageData.roomDescription}</p>
+                        <p>{pageData.roomPara}</p>
                         <div className="room-img-main">
                             {
                                 dummyLoop.map((data, index) =>{
@@ -39,7 +40,7 @@ const rooms = (props) => {
                                 })
                             }
                         </div>
-                        <div className="room-bottom-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas mollitia culpa a, earum error eveniet optio, molestias deserunt facere repudiandae architecto. Voluptatibus nemo nobis dolorem, deleniti fugiat eligendi repudiandae quaerat.</div>
+                        <div className="room-bottom-desc">{pageData.roomDescription}</div>
                         <Link className="more-retreat" to="/enquire">ENQUIRE </Link>
                     </div>
                 </div>
