@@ -7,6 +7,7 @@ import kiteImg from '../images/kitePink.png'
 const dummyLoop = [0, 1, 2, 3, 4, 5];
 const RetreatDetail = (props) => {
     const pageData = props.location.state.pageData
+    console.log(pageData, pageData.listRetreats)
     return (
         <>
             <style>

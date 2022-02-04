@@ -262,9 +262,6 @@ body{
 
 
 .banner-content {
-  /* text-align: center; */
-}
-.banner-content {
   top: -35px;
   position: relative;
   left: 10%;
@@ -274,10 +271,6 @@ body{
   font-size: 24px;
 }
 
-.banner-main{
-  /* margin-bottom: 80px; */
-  /* padding-top: 12px;   */
-}
 .banner-main > img{
   object-fit: cover;
   height: 377px;
@@ -543,9 +536,6 @@ footer a {
   }
 }
 @media (max-width: 767px){
-  body{
-    /* height: 100vh;  max-height: -webkit-fill-available;  */
-  }
   #___gatsby,#gatsby-focus-wrapper,
   .splash-banner{
     height: 100%;
