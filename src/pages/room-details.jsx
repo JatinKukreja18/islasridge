@@ -6,8 +6,10 @@ import RoomImg from '../images/roomSub.png'
 
 const dummyLoop = [0, 1, 2, 3, 4, 5]
 const rooms = (props) => {
-    const pageData = props.location.state.pageData
-    console.log(pageData)
+    if(props.location){
+        const pageData = props.location.state.pageData
+        console.log(pageData)
+    }
     return (
         <>
             <style>
