@@ -6,7 +6,7 @@ import kiteImg from '../images/kitePink.png'
 
 const dummyLoop = [0, 1, 2, 3, 4, 5];
 const RetreatDetail = (props) => {
-    console.log(props)
+    const pageData = props.location.state.pageData
     return (
         <>
             <style>
@@ -21,22 +21,22 @@ const RetreatDetail = (props) => {
                     <div className="breadcrumb padding-b-5">
                         <Link to="/retreats">Retreats</Link>
                         <span className="seprator"> / </span>
-                        <span>Retreats Name</span>
+                        <span>{pageData.breadcrumbTitle}</span>
                     </div>
                     {
-                        dummyLoop.map((data, index) =>{
+                        pageData.listRetreats.map((data, index) =>{
                             return(
                                 <div className="retreat-main" key={index}>
                                     <div>
-                                        <img className="full-width left-img img-cover" height="100%" src={dummyImg} alt="" />
+                                        <img className="full-width left-img img-cover" src={data.image} alt="" />
                                     </div>
                                     <div className="flex align-v-center retreat-heading-main">
                                         <div className="">
                                             <div className="flex align-v-center retreat-heading">
                                                 <img className="" src={kiteImg} alt="" />
-                                                <h5 className="retrea-title padding-left-20">Cooking</h5>
+                                                <h5 className="retrea-title padding-left-20">{data.heading}</h5>
                                             </div>
-                                            <p className="margin-b-0 retrea-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae ipsam earum id quos quia architecto, culpa, aliquid veniam laborum quis eaque voluptas ipsum labore voluptatum dignissimos necessitatibus fugiat. Laudantium, facilis.</p>
+                                            <p className="margin-b-0 retrea-desc">{data.description}</p>
                                             <Link className="more-retreat" to="/enquire">ENQUIRE</Link>
                                         </div>
                                     </div>
