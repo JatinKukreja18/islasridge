@@ -20,8 +20,10 @@ const Home = ({bannerContent}) => {
                         <>
                         <img height="500" width="100%" src={bannerContent.background.url} alt="" /> 
                         <div className="banner-content">
-                            <h5 className="banner-heading">'{RichText.asText(bannerContent.title.raw)} Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum'</h5>
-                            <p className="margin-b-0 home-banner-title">-{RichText.asText(bannerContent.credits.raw)}</p>
+                            {/* <h5 className="banner-heading">'{RichText.asText(bannerContent.title.raw)} Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum'</h5>
+                            <p className="margin-b-0 home-banner-title">-{RichText.asText(bannerContent.credits.raw)}</p> */}
+                            <h5 className="banner-heading">‘Isla’s Ridge is the way I want to look after people. It’s the way I live my life’</h5>
+                            <p className="margin-b-0 home-banner-title">- Isla (Loulou) Van Damme</p>
                         </div>
                         </>
                         }

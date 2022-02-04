@@ -5,12 +5,24 @@ import SEO from '../components/SEO'
 
 const retreatsData = [
     {
-        title: "A la carte",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit."
+        title: "À la carte",
+        code: "a-la-carte",
+        description: "We invite practitioners to design their own retreats, or engage with those who wish to plan tailored group offerings.",
+        nextPageData: {
+            title: "À la carte",
+            code: "a-la-carte",
+            description: "We invite practitioners to design their own retreats, or engage with those who wish to plan tailored group offerings.",
+        }
     },
     {
-        title: "Table d'hote",
-        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. consectetur adipisicing elit."
+        title: "Table d’hote",
+        code: "table-dhote",
+        description: "Select from our offered range of retreat options. From yoga to cooking and gardening, each retreat is designed to learn, immerse and listen.",
+        nextPageData: {
+            title: "Table d’hote",
+            code: "table-dhote",
+            description: "Select from our offered range of retreat options. From yoga to cooking and gardening, each retreat is designed to learn, immerse and listen.",
+        }
     },
 ]
 
@@ -38,7 +50,7 @@ const retreats = () => {
                                     <div className="retreats-box" key={index}>
                                         <h5 className="retreats-title">{data.title}</h5>
                                         <p className="margin-b-0 retreats-desc">{data.description}</p>
-                                        <Link className="more-retreat" to="/retreat-detail">MORE</Link>
+                                        <Link className="more-retreat" state={{ pageData: data.nextPageData }} to={`/retreat/${data.code}`}>MORE</Link>
                                     </div>
                                 )
                             })

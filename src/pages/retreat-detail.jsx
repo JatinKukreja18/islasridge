@@ -6,6 +6,7 @@ import kiteImg from '../images/kitePink.png'
 
 const dummyLoop = [0, 1, 2, 3, 4, 5];
 const RetreatDetail = (props) => {
+    console.log(props)
     return (
         <>
             <style>
@@ -18,9 +19,9 @@ const RetreatDetail = (props) => {
             <Layout>
                 <div className="container">
                     <div className="breadcrumb padding-b-5">
-                        <Link to="/room-details">Retreats</Link>
+                        <Link to="/retreats">Retreats</Link>
                         <span className="seprator"> / </span>
-                        <Link to="/room-details">Retreats Name</Link>
+                        <span>Retreats Name</span>
                     </div>
                     {
                         dummyLoop.map((data, index) =>{
