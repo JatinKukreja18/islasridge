@@ -4,12 +4,10 @@ import Layout from '../components/Layout';
 import dummyImg from '../images/imgRetreat.png'
 import kiteImg from '../images/kitePink.png'
 
-const dummyLoop = [0, 1, 2, 3, 4, 5];
+// const dummyLoop = [0, 1, 2, 3, 4, 5];
 const RetreatDetail = (props) => {
-    if(props.location){
-        const pageData = props.location.state.pageData
-        console.log(pageData, pageData.listRetreats)
-    }
+    const pageData = props.location && props.location.state.pageData;
+    console.log(props)
     return (
         <>
             <style>

@@ -1,15 +1,13 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
-import RoomMainBanner from '../images/roomMain.png'
-import RoomImg from '../images/roomSub.png'
+// import RoomMainBanner from '../images/roomMain.png'
+// import RoomImg from '../images/roomSub.png'
 
-const dummyLoop = [0, 1, 2, 3, 4, 5]
+// const dummyLoop = [0, 1, 2, 3, 4, 5]
 const rooms = (props) => {
-    if(props.location){
-        const pageData = props.location.state.pageData
-        console.log(pageData)
-    }
+    const pageData = props.location && props.location.state.pageData;
+    console.log(props)
     return (
         <>
             <style>
