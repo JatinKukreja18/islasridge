@@ -1,10 +1,9 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
-import dummyImg from '../images/imgRetreat.png'
 import kiteImg from '../images/kitePink.png'
+import { navigate } from 'gatsby';
 
-// const dummyLoop = [0, 1, 2, 3, 4, 5];
 const RetreatDetail = (props) => {
     const pageData = props.location.state && props.location.state.pageData;
 
@@ -19,7 +18,7 @@ const RetreatDetail = (props) => {
             </style>
             <Layout>
                 {
-                    pageData &&
+                    pageData ?
                         <div className="container">
                             <div className="breadcrumb padding-b-5">
                                 <Link to="/retreats">Retreats</Link>
@@ -48,6 +47,7 @@ const RetreatDetail = (props) => {
                                 })
                             }
                         </div>
+                    : navigate('/retreats/')
                 }
             </Layout>
         </>

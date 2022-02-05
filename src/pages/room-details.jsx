@@ -1,10 +1,11 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
+import { navigate } from 'gatsby';
 
 const rooms = (props) => {
     const pageData = props.location.state && props.location.state.pageData;
-    
+
     return (
         <>
             <style>
@@ -17,7 +18,7 @@ const rooms = (props) => {
             </style>
             <Layout>
                 {
-                    pageData &&
+                    pageData ?
                         <div className="container">
                             <div className="full-banner">
                                 <div className="breadcrumb padding-b-5">
@@ -43,6 +44,7 @@ const rooms = (props) => {
                                 <Link className="more-retreat" to="/enquire">ENQUIRE </Link>
                             </div>
                         </div>
+                    : navigate('/rooms/')
                 }
             </Layout>
         </>
