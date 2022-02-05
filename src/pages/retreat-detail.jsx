@@ -31,7 +31,7 @@ const RetreatDetail = (props) => {
                                     return(
                                         <div className="retreat-main" key={index}>
                                             <div>
-                                                <img className="full-width left-img img-cover" src={data.image} alt="" />
+                                                <img className="full-width left-img img-cover" src={data.image} height="540" alt="" />
                                             </div>
                                             <div className="flex align-v-center retreat-heading-main">
                                                 <div className="">
