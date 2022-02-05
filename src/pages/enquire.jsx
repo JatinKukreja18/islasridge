@@ -9,10 +9,11 @@ const contactSelect = [
         title: "Room",
         name: "room",
         options: [
-            "Room1",
-            "Room2",
-            "Room3",
-            "Room4"
+            "INDOGO",
+            "MANGO",
+            "SAGE",
+            "CHUNNA",
+            "GREY"
         ]
     },
     {
@@ -31,10 +32,8 @@ const contactSelect = [
         title: "Retreat",
         name: "retreat",
         options: [
-            "Retreat1",
-            "Retreat2",
-            "Retreat3",
-            "Retreat4"
+            "À la carte",
+            "Table d’hote",
         ]
     }
 ]
@@ -153,7 +152,7 @@ const Enquire = () => {
                                 For questions email us on islasridge@gmail.com. Please fill the form below for any booking related enquiry.
                             </p>
 
-                            
+
                             {successMessage &&
                                 <div className="enquire_sent flex align-v-center padding-b-5">
                                     <div className="flex padding-r-5">
