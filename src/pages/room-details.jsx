@@ -1,10 +1,9 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
-import { useNavigate } from "react-router-dom";
+import { navigate } from 'gatsby';
 
 const rooms = (props) => {
-    const navigate = useNavigate();
     const pageData = props.location.state && props.location.state.pageData;
 
     return (
