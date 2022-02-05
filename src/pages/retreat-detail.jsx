@@ -6,8 +6,8 @@ import kiteImg from '../images/kitePink.png'
 
 // const dummyLoop = [0, 1, 2, 3, 4, 5];
 const RetreatDetail = (props) => {
-    const pageData = props.location && props.location.state.pageData;
-    console.log(props)
+    const pageData = props.location.state && props.location.state.pageData;
+
     return (
         <>
             <style>
@@ -18,35 +18,37 @@ const RetreatDetail = (props) => {
                 `}
             </style>
             <Layout>
-                <div className="container">
-                    <div className="breadcrumb padding-b-5">
-                        <Link to="/retreats">Retreats</Link>
-                        <span className="seprator"> / </span>
-                        <span className="added">{pageData.breadcrumbTitle}</span>
-                    </div>
-                    {
-                        console.log(pageData.listRetreats),
-                        pageData.listRetreats.map((data, index) =>{
-                            return(
-                                <div className="retreat-main" key={index}>
-                                    <div>
-                                        <img className="full-width left-img img-cover" src={data.image} alt="" />
-                                    </div>
-                                    <div className="flex align-v-center retreat-heading-main">
-                                        <div className="">
-                                            <div className="flex align-v-center retreat-heading">
-                                                <img className="" src={kiteImg} alt="" />
-                                                <h5 className="retrea-title padding-left-20">{data.heading}</h5>
+                {
+                    pageData &&
+                        <div className="container">
+                            <div className="breadcrumb padding-b-5">
+                                <Link to="/retreats">Retreats</Link>
+                                <span className="seprator"> / </span>
+                                <span className="added">{pageData.breadcrumbTitle}</span>
+                            </div>
+                            {
+                                pageData.listRetreats.map((data, index) =>{
+                                    return(
+                                        <div className="retreat-main" key={index}>
+                                            <div>
+                                                <img className="full-width left-img img-cover" src={data.image} alt="" />
                                             </div>
-                                            <p className="margin-b-0 retrea-desc">{data.description}</p>
-                                            <Link className="more-retreat" to="/enquire">ENQUIRE</Link>
+                                            <div className="flex align-v-center retreat-heading-main">
+                                                <div className="">
+                                                    <div className="flex align-v-center retreat-heading">
+                                                        <img className="" src={kiteImg} alt="" />
+                                                        <h5 className="retrea-title padding-left-20">{data.heading}</h5>
+                                                    </div>
+                                                    <p className="margin-b-0 retrea-desc">{data.description}</p>
+                                                    <Link className="more-retreat" to="/enquire">ENQUIRE</Link>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                                    )
+                                })
+                            }
+                        </div>
+                }
             </Layout>
         </>
     );
