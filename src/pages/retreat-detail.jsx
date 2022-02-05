@@ -2,9 +2,10 @@ import { Link } from 'gatsby';
 import React from 'react';
 import Layout from '../components/Layout';
 import kiteImg from '../images/kitePink.png'
-import { navigate } from 'gatsby';
+import { useNavigate } from "react-router-dom";
 
 const RetreatDetail = (props) => {
+    const navigate = useNavigate();
     const pageData = props.location.state && props.location.state.pageData;
 
     return (
