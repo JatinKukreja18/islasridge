@@ -7,9 +7,9 @@ import './../styles/style.css'
 
 const Layout = ({ isHomepage, children, navigation }) => (
   <>
-    <Header isHomepage={isHomepage} navigation={navigation} />
+    {/* <div isHomepage={isHomepage} navigation={navigation} /> */}
     {children}
-    <Footer />
+    {/* <Footer /> */}
   </>
 )
 

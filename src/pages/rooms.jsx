@@ -94,7 +94,7 @@ const rooms = () => {
                     title="Rooms"
                     description="Learn more about us who we are and what we do."
                 />
-                <div className="container">
+                <div className="container space-for-header">
                     <div className="m-heading text-center">Rooms</div>
                     <div className="room-container flex flex-center">
                         <div className="relative cover-box">

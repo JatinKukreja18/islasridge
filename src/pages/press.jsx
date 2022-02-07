@@ -57,7 +57,7 @@ const press = () => {
                     title="Press"
                     description="Learn more about us who we are and what we do."
                 />
-                <div className="container">
+                <div className="container space-for-header">
                     <div className="m-heading text-center">Press</div>
                     <div className="press-main padding-t-50">
                         {

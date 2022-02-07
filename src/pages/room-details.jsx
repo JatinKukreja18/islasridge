@@ -19,7 +19,7 @@ const rooms = (props) => {
             <Layout>
                 {
                     pageData ?
-                        <div className="container">
+                        <div className="container space-for-header">
                             <div className="full-banner">
                                 <div className="breadcrumb padding-b-5">
                                     <Link to="/rooms">Rooms</Link>

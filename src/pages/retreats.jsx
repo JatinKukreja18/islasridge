@@ -65,7 +65,7 @@ const retreats = () => {
                     title="Retreats"
                     description="Learn more about us who we are and what we do."
                 />
-                <div className="container">
+                <div className="container space-for-header">
                     <div className="m-heading text-center">Retreats</div>
                     <div className="retreats-main padding-t-50">
                         {

@@ -14,7 +14,7 @@ const Home = ({bannerContent}) => {
                 `}
             </style>
             <Layout>
-                <div className="container home-container">
+                <div className="container home-container full-vh space-for-header">
                     <div className="relative banner-main">
                         {bannerContent && 
                         <>

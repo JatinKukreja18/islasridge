@@ -1,12 +1,15 @@
 import React, {useState, useRef} from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import { RichText } from 'prismic-reactjs'
 
 const About = () => {
   const aboutStaticData = {
     title: "About",
     // description: "Isla’s Ridge is the way I want to look after people. It’s the way I live my life’ Sitting atop a thousand meter ridge in the Palini Hills, Isla’s Ridge is adjacent to Loulou’s private residence, overlooking the expansive Western Ghats of South India. A secret shared, it’s a place to be away from everything, except oneself. Cultivated through personal relationships, it is an open invitation for the like-minded, equally suited for individual or group retreats with holistic workshops in nature, food, mind and body.",
-    description: "Isla’s Ridge is the way I want to look after people. It’s the way I live my life’ Sitting atop a thousand meter ridge in the Palini Hills, Isla’s Ridge is adjacent to Loulou’s private residence, overlooking the expansive Western Ghats of South India. A secret shared, it’s a place to be away from everything, except oneself. Cultivated through personal relationships, it is an open invitation for the like-minded, equally suited for individual or group retreats with holistic workshops in nature, food, mind and body.",
+    description: `Isla’s Ridge is the way I want to look after people. It’s the way I live my life’ 
+    
+    Sitting atop a thousand meter ridge in the Palini Hills, Isla’s Ridge is adjacent to Loulou’s private residence, overlooking the expansive Western Ghats of South India. A secret shared, it’s a place to be away from everything, except oneself. Cultivated through personal relationships, it is an open invitation for the like-minded, equally suited for individual or group retreats with holistic workshops in nature, food, mind and body.`,
     accordion : [
       {
         title : "Location",
@@ -34,9 +37,12 @@ const About = () => {
           description="Learn more about us who we are and what we do."
         />
 
-        <main className="container about-container">
-          <h1 className="white about-text inherit-font">{aboutStaticData.title}</h1>
-          <p className="about-description">{aboutStaticData.description}</p>
+        <main className="container about-container space-for-header full-vh">
+          <h1 className="white about-text font1">{aboutStaticData.title}</h1>
+          <p className="about-description">
+            {aboutStaticData.description}
+            {/* {RichText.asText(bannerContent.description.raw)} */}
+          </p>
           <div>
             {
               aboutStaticData.accordion.map((data, index) =>{

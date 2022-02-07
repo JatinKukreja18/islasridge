@@ -41,12 +41,12 @@ h2, h3, h4, h5, h6 {
   font-family: gitan-latin, sans-serif;
 }
 h1 {
-  font-family: 'Amiri', Serif; 
-  font-size: 42px; 
+  font-family: var(--font2); 
+  font-size: 50px; 
   font-weight: normal; 
-  color: #484D52; 
+  /* color: #484D52;  */
   line-height: 52px; 
-  letter-spacing : 1.14;
+  /* letter-spacing : 1.14; */
   margin-bottom: 1rem;
 }
 h2, h2 a {

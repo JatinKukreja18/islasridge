@@ -19,7 +19,7 @@ const RetreatDetail = (props) => {
             <Layout>
                 {
                     pageData ?
-                        <div className="container">
+                        <div className="container space-for-header">
                             <div className="breadcrumb padding-b-5">
                                 <Link to="/retreats">Retreats</Link>
                                 <span className="seprator"> / </span>

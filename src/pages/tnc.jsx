@@ -35,7 +35,7 @@ const tnc = () => {
                     title="Tnc"
                     description="Learn more about us who we are and what we do."
                 />
-                <div className="container">
+                <div className="container space-for-header">
                     <h3 className="tnc-heading">{tncStaticData.title}</h3>
                     {
                         tncStaticData.tncs.map((data, index) => {
