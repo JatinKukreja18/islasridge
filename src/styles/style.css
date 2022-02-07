@@ -582,7 +582,7 @@ footer a {
 }
 .retreats-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(430px, 0fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px 30px; 
   justify-content: center;
 
