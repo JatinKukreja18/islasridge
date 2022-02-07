@@ -47,7 +47,7 @@ const RetreatDetail = (props) => {
                                 })
                             }
                         </div>
-                    : navigate('/retreats/')
+                    : typeof window !== `undefined` && navigate('/retreats/')
                 }
             </Layout>
         </>

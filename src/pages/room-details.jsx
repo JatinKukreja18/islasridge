@@ -44,7 +44,7 @@ const rooms = (props) => {
                                 <Link className="more-retreat" to="/enquire">ENQUIRE </Link>
                             </div>
                         </div>
-                    : navigate('/rooms/')
+                    : typeof window !== `undefined` && navigate('/rooms/')
                 }
             </Layout>
         </>
