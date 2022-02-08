@@ -9,7 +9,7 @@ const contactSelect = [
         title: "Room",
         name: "room",
         options: [
-            "INDOGO",
+            "INDOIO",
             "MANGO",
             "SAGE",
             "CHUNNA",

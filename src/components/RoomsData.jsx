@@ -8,12 +8,12 @@ import roomImage5 from '../images/roomImage5.jpeg'
 export const roomsData = [
     {
         firstBox: true,
-        name: "INDOGO",
-        code: "indogo-room",
+        name: "INDIGO",
+        code: "indigo-room",
         nextPageData: {
-            breadcrumbTitle: "Indogo Room",
+            breadcrumbTitle: "Indigo Room",
             featuredImage: featuredRoomImage,
-            roomHeading: "Indogo Room",
+            roomHeading: "Indigo Room",
             roomPara: "Isla’s Ridge comprises two dwellings, with a total of five rooms. The Indigo room is a spacious room of ~226 sq ft. with a king size bed which can be separated into two single beds.  A writer’s desk overlooks an exceptional view of the ridge and land. ",
             roomDescription: "Rooms at Isla’s Ridge are intentionally devoid of a TV, phones and wifi is spotty at best. No, we do not feel this is necessary to solve for. All rooms include access to the pool, garden and a large library with over 300 cookbooks.",
             roomsGallery: [roomImage1,roomImage2,roomImage3,roomImage4,roomImage5]
