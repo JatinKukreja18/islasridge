@@ -1085,14 +1085,15 @@ body::-webkit-scrollbar-thumb{
 @media (max-width: 1020px){
 .banner-content {
     left: 0;
-    padding: 0px 30px;
+    padding: 0px 10px;
   }
   .banner-heading{
-    font-size: 32px;
+    font-size: 26px;
+    padding-bottom: 10px;
   }
   .home-container{
     padding: 0px;
-    margin-top: 0px;
+    /* margin-top: 0px; */
   }
 }
 @media (max-width: 860px){
@@ -1133,7 +1134,7 @@ body::-webkit-scrollbar-thumb{
     padding-right: 36px;
   }
   .about-text,.about-description, .accordion-para, .accor-heading{
-    font-size: 36px;
+    font-size: 25px;
   }
   .about-text{
     margin-bottom: 30px;
