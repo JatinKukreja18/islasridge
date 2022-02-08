@@ -603,15 +603,20 @@ footer a {
   padding: 0px 10px;
   display: inline-block;
   line-height: 23px;
-  font-weight: 500;
+  /* font-weight: 500; */ 
   min-width: 81px;
   text-align: center;
+  font-family: var(--font1);
+}
+.full-banner *{
+  font-family: var(--font1);
 }
 .retreats-box .more-retreat{
   color: #6C6A48;
   border-color: #6C6A48;
   position: absolute;
   bottom: calc(0px + 40px);
+  font-family: var(--font1);
 }
 .retreats-box {
   padding: 120px 30px 40px 30px;
@@ -742,13 +747,14 @@ footer a {
 }
 .breadcrumb, .breadcrumb * {
   color: #FEBB21;
-  font-size: 16px;
+  font-size: 14px;
 }
 .seprator{
   padding: 0px 4px;
 }
 .room-bottom-desc {
   padding: 30px 0px;
+  font-family: var(--font1);
 }
 .full-banner{
   margin-bottom: 60px;
