@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import {retreatsData} from '../components/retreatData'
+import {retreatsData} from '../components/RetreatData'
 
 const retreats = () => {
     return (

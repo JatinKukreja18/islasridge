@@ -2,10 +2,17 @@ import { Link } from 'gatsby'
 import React from 'react'
 import Layout from '../components/Layout'
 import { navigate } from 'gatsby';
+import { roomsData } from '../components/RoomsData';
 
 const rooms = (props) => {
-    const pageData = props.location.state && props.location.state.pageData;
+    // const pageData = props.location.state && props.location.state.pageData;
+    const pageData = roomsData.filter((pageData) =>{
+        return pageData.code === props.roomName;
+    })
 
+    const filterPageData = pageData[0] ? pageData[0].nextPageData : false;
+    
+    console.log(props)
     return (
         <>
             <style>
@@ -18,20 +25,20 @@ const rooms = (props) => {
             </style>
             <Layout>
                 {
-                    pageData ?
+                    filterPageData ?
                         <div className="container space-for-header">
                             <div className="full-banner">
                                 <div className="breadcrumb padding-b-5">
                                     <Link to="/rooms">Rooms</Link>
                                     <span className="seprator"> / </span>
-                                    <span>{pageData.breadcrumbTitle}</span>
+                                    <span>{filterPageData.breadcrumbTitle}</span>
                                 </div>
-                                <img className="full-width img-cover" src={pageData.featuredImage} height="455" alt="" /> 
-                                <h5 className="room-name">{pageData.roomHeading}</h5>
-                                <p>{pageData.roomPara}</p>
+                                <img className="full-width img-cover" src={filterPageData.featuredImage} height="455" alt="" /> 
+                                <h5 className="room-name">{filterPageData.roomHeading}</h5>
+                                <p>{filterPageData.roomPara}</p>
                                 <div className="room-img-main">
                                     {
-                                        pageData.roomsGallery.map((data, index) =>{
+                                        filterPageData.roomsGallery.map((data, index) =>{
                                             return(
                                                 <div className="room-img" key={index}>
                                                     <img className="full-width img-cover" src={data} height="282" alt="" />
@@ -40,11 +47,11 @@ const rooms = (props) => {
                                         })
                                     }
                                 </div>
-                                <div className="room-bottom-desc">{pageData.roomDescription}</div>
+                                <div className="room-bottom-desc">{filterPageData.roomDescription}</div>
                                 <Link className="more-retreat" to="/enquire">ENQUIRE </Link>
                             </div>
                         </div>
-                    : typeof window !== `undefined` && navigate('/rooms/')
+                    : typeof window !== `undefined` && navigate('/404/')
                 }
             </Layout>
         </>

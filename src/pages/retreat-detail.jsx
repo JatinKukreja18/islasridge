@@ -3,15 +3,15 @@ import React from 'react';
 import Layout from '../components/Layout';
 import kiteImg from '../images/kitePink.png'
 import { navigate } from 'gatsby';
-import {retreatsData} from '../components/retreatData'
+import {retreatsData} from '../components/RetreatData'
 
 const RetreatDetail = (props) => {
     // const pageData = props.location.state && props.location.state.pageData;
-    const urlData = retreatsData.filter((urlData) =>{
-        return urlData.code === props.retreatName;
+    const pageData = retreatsData.filter((pageData) =>{
+        return pageData.code === props.retreatName;
     })
 
-    const urlFilterData = urlData[0] ? urlData[0].nextPageData : false;
+    const filterPageData = pageData[0] ? pageData[0].nextPageData : false;
 
     console.log(props)
     return (
@@ -25,15 +25,15 @@ const RetreatDetail = (props) => {
             </style>
             <Layout>
                 {
-                    urlFilterData ? 
+                    filterPageData ? 
                         <div className="container space-for-header">
                             <div className="breadcrumb padding-b-5">
                                 <Link to="/retreats">Retreats</Link>
                                 <span className="seprator"> / </span>
-                                <span className="added">{urlFilterData.breadcrumbTitle}</span>
+                                <span className="added">{filterPageData.breadcrumbTitle}</span>
                             </div>
                             {
-                                urlFilterData.listRetreats.map((data, index) =>{
+                                filterPageData.listRetreats.map((data, index) =>{
                                     return(
                                         <div className="retreat-main" key={index}>
                                             <div>

@@ -16,7 +16,7 @@ exports.onCreatePage = async ({ page, actions }) => {
     if (page.path.match(/^\/room/)) {
         createPage({
             path: '/room/*',
-            matchPath: '/room/:name',
+            matchPath: '/room/:roomName',
             component: path.resolve(`src/pages/room-details.jsx`),
         }) 
      }
