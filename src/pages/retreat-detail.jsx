@@ -3,10 +3,17 @@ import React from 'react';
 import Layout from '../components/Layout';
 import kiteImg from '../images/kitePink.png'
 import { navigate } from 'gatsby';
+import {retreatsData} from '../components/retreatData'
 
 const RetreatDetail = (props) => {
-    const pageData = props.location.state && props.location.state.pageData;
+    // const pageData = props.location.state && props.location.state.pageData;
+    const urlData = retreatsData.filter((urlData) =>{
+        return urlData.code === props.retreatName;
+    })
 
+    const urlFilterData = urlData[0] ? urlData[0].nextPageData : false;
+
+    console.log(props)
     return (
         <>
             <style>
@@ -18,15 +25,15 @@ const RetreatDetail = (props) => {
             </style>
             <Layout>
                 {
-                    pageData ?
+                    urlFilterData ? 
                         <div className="container space-for-header">
                             <div className="breadcrumb padding-b-5">
                                 <Link to="/retreats">Retreats</Link>
                                 <span className="seprator"> / </span>
-                                <span className="added">{pageData.breadcrumbTitle}</span>
+                                <span className="added">{urlFilterData.breadcrumbTitle}</span>
                             </div>
                             {
-                                pageData.listRetreats.map((data, index) =>{
+                                urlFilterData.listRetreats.map((data, index) =>{
                                     return(
                                         <div className="retreat-main" key={index}>
                                             <div>
@@ -47,7 +54,7 @@ const RetreatDetail = (props) => {
                                 })
                             }
                         </div>
-                    : typeof window !== `undefined` && navigate('/retreats/')
+                    : typeof window !== `undefined` && navigate('/404/')
                 }
             </Layout>
         </>
