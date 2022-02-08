@@ -46,7 +46,7 @@ const Header = ({ isHomepage }) => {
             headerMenus.map((data, index) =>{
               return(
                 <li key={index}>
-                  <Link activeClassName="active-menu" exact="true" to={data.link} onClick={openHamMenus}>{data.title}</Link>
+                  <Link activeClassName="active-menu" exact={true} to={data.link} onClick={openHamMenus}>{data.title}</Link>
                 </li>
               )
             })
