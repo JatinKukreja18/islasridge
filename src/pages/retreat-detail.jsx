@@ -15,11 +15,16 @@ const RetreatDetail = (props) => {
     const filterPageData = pageData[0] ? pageData[0].nextPageData : false;
 
     console.log(props)
+    
+    let bgColor = "#ffefd9"
+    if(props.retreatName === "a-la-carte"){
+        bgColor = "#f5f9e4";
+    }
     return (
         <>
             <style>
                 {`
-                    body,.site-header{background-color: #ffefd9;}
+                    ${`body,.site-header{background-color: ${bgColor}}`}
                     *, .site-header a, a{color: #442220;}
                     .ham-menus-lines, .ham-menus::before, .ham-menus::after{background-color: black;} 
                 `}
