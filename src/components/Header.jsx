@@ -16,23 +16,23 @@ const Header = ({ isHomepage }) => {
     },
     {
       title: "About",
-      link: "/about"
+      link: "/about/"
     },
     {
       title: "Rooms",
-      link: "/rooms"
+      link: "/rooms/"
     },
     {
       title: "Retreats",
-      link: "/retreats"
+      link: "/retreats/"
     },
     {
       title: "Press",
-      link: "/press"
+      link: "/press/"
     },
     {
       title: "Enquire",
-      link: "/enquire"
+      link: "/enquire/"
     }
   ]
   
