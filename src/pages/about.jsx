@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import { RichText } from 'prismic-reactjs'
+// import { RichText } from 'prismic-reactjs'
 
 const About = () => {
   const aboutStaticData = {
@@ -13,11 +13,11 @@ const About = () => {
     accordion : [
       {
         title : "Location",
-        description : "Isla’s Ridge is located in the Palani Hills of Tamil Nadu, an hour from Madurai and 600 km south of Bangalore. The nearby Nilgiri Hills (blue mountains) were named given the blue hue emitted from the horizon line and the region’s unique hued Neelakurinji flower which blooms every 12 years. The retreat is located atop a 1000 meter cliff with an expansive view of the hills, a remote island in the sky, ensconced in nature’s true spirit. The hills are an extension of the Western Ghats, an evergreen, tropical forest range beginning in Gujarat, travelling south 1,600 km to the end of Tamil Nadu. Located in the Deccan plateau, the range is a UNESCO World Heritage site, encompassing one of the most biologically diverse regions in the world and home to black panthers, tigers and the less fierce but equally untamed Isla Van Damme.",
+        description : "Isla’s Ridge is located in the Palani Hills of Tamil Nadu, an hour from Madurai and 600 km south of Bangalore. The nearby Nilgiri Hills (blue mountains) were named given the blue hue emitted from the horizon line and the region’s unique hued Neelakurinji flower which blooms every 12 years. <br/><br/>The retreat is located atop a 1000 meter cliff with an expansive view of the hills, a remote island in the sky, ensconced in nature’s true spirit. <br/><br/>The hills are an extension of the Western Ghats, an evergreen, tropical forest range beginning in Gujarat, travelling south 1,600 km to the end of Tamil Nadu. Located in the Deccan plateau, the range is a UNESCO World Heritage site, encompassing one of the most biologically diverse regions in the world and home to black panthers, tigers and the less fierce but equally untamed Isla Van Damme.",
       },
       {
         title : "About Isla Van Damme",
-        description : "Affectionately known as ‘Loulou’ to most, Isla’s Ridge reclaims her name in a return home, a full stop at oneself. Born to Belgian parents in Tamil Nadu’s hill station of Kodaikanal, Isla lived in Bombay till the age of 16 and moved to Europe thereafter. She returned thirty five years later to Goa, as a restaurateur and interior designer. The first home she designed, Ahilya by the Sea exists as a testament to her eclectic style, as do numerous design projects and long-term associations with Mumbai’s beloved Bungalow 8 and Raw Mango. Isla’s Ridge is the culmination of a life lived. Offering a retreat inwards, it exists to meet minds, nourish the soul and body, and revel in the simplicity of everyday.",
+        description : "Affectionately known as ‘Loulou’ to most, Isla’s Ridge reclaims her name in a return home, a full stop at oneself.<br/><br/> Born to Belgian parents in Tamil Nadu’s hill station of Kodaikanal, Isla lived in Bombay till the age of 16 and moved to Europe thereafter. She returned thirty five years later to Goa, as a restaurateur and interior designer. The first home she designed, Ahilya by the Sea exists as a testament to her eclectic style, as do numerous design projects and long-term associations with Mumbai’s beloved Bungalow 8 and Raw Mango.<br/><br/> Isla’s Ridge is the culmination of a life lived. Offering a retreat inwards, it exists to meet minds, nourish the soul and body, and revel in the simplicity of everyday.",
       }
     ]
   }
@@ -40,8 +40,15 @@ const About = () => {
         <main className="container about-container space-for-header full-vh">
           <h1 className="white about-text font1">{aboutStaticData.title}</h1>
           <p className="about-description">
-            {aboutStaticData.description}
+            {/* {aboutStaticData.description} */}
             {/* {RichText.asText(bannerContent.description.raw)} */}
+            Isla’s Ridge is the way I want to look after people. It’s the way I live my life’ 
+            <br/>
+            <br/>
+            Sitting atop a thousand meter ridge in the Palini Hills, Isla’s Ridge is adjacent to Loulou’s private residence, overlooking the expansive Western Ghats of South India. A secret shared, it’s a place to be away from everything, except oneself. 
+            <br/>
+            <br/>
+            Cultivated through personal relationships, it is an open invitation for the like-minded, equally suited for individual or group retreats with holistic workshops in nature, food, mind and body.
           </p>
           <div>
             {
@@ -69,7 +76,12 @@ const AboutAccordion = (props) => {
     toggleState === index ? setToggleState("") : setToggleState(index);
     setToggleHeight(`${elementRef.current.scrollHeight + 16}px`);
   }
-
+  const options = {
+    allowedTags: ['br', 'span'],
+    allowedAttributes: {
+      br: ['class']
+    }
+  }
   return(
     <>
       <div className={`accor-main ${toggleState === props.indexNum ? 'expand-section' : ''}`}>
@@ -95,14 +107,13 @@ const AboutAccordion = (props) => {
             </svg>
           </div>
         </div>
-
+        
         <div className={`accordion-para`}
           ref={elementRef} style={{
             height: `${toggleState === props.indexNum ? toggleHeight : '0px'}`,
           }}
-          >
-          {props.aboutData.description}
-        </div>
+          dangerouslySetInnerHTML={{__html :`${props.aboutData.description}`}} 
+          />
 
       </div>
     </>
