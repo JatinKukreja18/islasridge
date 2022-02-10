@@ -29,7 +29,7 @@ const retreats = () => {
                                         <h5 className="retreats-title">{data.title}</h5>
                                         <p className="margin-b-0 retreats-desc">{data.description}</p>
                                         {/* <Link className="more-retreat" state={{ pageData: data.nextPageData }} to={`/retreat/${data.code}`}>MORE</Link> */}
-                                        <Link className="more-retreat" to={`/retreat/${data.code}`}>MORE</Link>
+                                        <Link className="more-retreat" to={`/retreat/${data.code}/`}>MORE</Link>
                                     </div>
                                 )
                             })

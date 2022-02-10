@@ -39,7 +39,7 @@ const RetreatDetail = (props) => {
                             />
                             <div className="container space-for-header">
                                 <div className="breadcrumb padding-b-5">
-                                    <Link to="/retreats">Retreats</Link>
+                                    <Link to="/retreats/">Retreats</Link>
                                     <span className="seprator"> / </span>
                                     <span className="added">{filterPageData.breadcrumbTitle}</span>
                                 </div>
@@ -57,7 +57,7 @@ const RetreatDetail = (props) => {
                                                             <h5 className="retrea-title padding-left-20">{data.heading}</h5>
                                                         </div>
                                                         <p className="margin-b-0 retrea-desc">{data.description}</p>
-                                                        <Link className="more-retreat" to="/enquire">ENQUIRE</Link>
+                                                        <Link className="more-retreat" to="/enquire/">ENQUIRE</Link>
                                                     </div>
                                                 </div>
                                             </div>

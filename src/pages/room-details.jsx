@@ -36,7 +36,7 @@ const rooms = (props) => {
                             <div className="container space-for-header">
                                 <div className="full-banner">
                                     <div className="breadcrumb padding-b-5">
-                                        <Link to="/rooms">Rooms</Link>
+                                        <Link to="/rooms/">Rooms</Link>
                                         <span className="seprator"> / </span>
                                         <span>{filterPageData.breadcrumbTitle}</span>
                                     </div>
@@ -55,7 +55,7 @@ const rooms = (props) => {
                                         }
                                     </div>
                                     <div className="room-bottom-desc">{filterPageData.roomDescription}</div>
-                                    <Link className="more-retreat" to="/enquire">ENQUIRE </Link>
+                                    <Link className="more-retreat" to="/enquire/">ENQUIRE </Link>
                                 </div>
                             </div>
                         </>
