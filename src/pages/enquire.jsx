@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import emailjs from "emailjs-com"
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import mapImage from '../images/map_img.png'
 
 const contactSelect = [
     {
@@ -41,6 +42,7 @@ const contactSelect = [
 const formFields = {name: "",email: "",from: "",to: "",room: "",guest: "",retreat: "",message: ""}
 
 const Enquire = () => {
+    console.log(mapImage)
     const [enquireForm, setEnquireForm] = useState(formFields)
     const [selectShow, setSelectShow] = useState(false)
     const [successMessage, setSuccessMessage] = useState(false)
@@ -128,7 +130,7 @@ const Enquire = () => {
         <>
             <style>
                 {`
-                    body,.site-header{background-color: #FDEDD9;}
+                    body,.site-header{background-color: #f3f7e1;}
                     *, .site-header a, a{color: #442220;}
                     .ham-menus-lines, .ham-menus::before, .ham-menus::after{background-color: black;} 
                 `}
@@ -145,7 +147,7 @@ const Enquire = () => {
                     <div className="m-heading text-center">Enquire</div>
                     <div className="flex contact-main">
                         <div className="map">
-                            <img src="https://media.istockphoto.com/illustrations/india-map-with-states-grey-illustration-id582277330" alt=""/>
+                            <img src={mapImage} alt=""/>
                         </div>
                         <div className="form-container">
                             <p className="enquire-email">
