@@ -8,7 +8,7 @@ export const retreatsData = [
     {
         title: "À la carte",
         code: "a-la-carte",
-        description: "We invite practitioners to design their own retreats, or engage with those who wish to plan tailored group offerings.",
+        description: "Customise a retreat, designed for a group to engage with in-house or external specialists.",
         nextPageData: {
             breadcrumbTitle: "À la carte",
             listRetreats: [

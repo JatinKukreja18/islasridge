@@ -432,8 +432,8 @@ footer {
   font-size: 16px;
   /* font-style: italic; */
   text-align: left;
-  /* position: absolute; */
-  /* bottom: -20px; */
+  position: absolute;
+  bottom: -70px;
   width: 100%;
 }
 footer p {
@@ -611,14 +611,20 @@ footer a {
   font-weight: 500;
 }
 .more-retreat {
-  border: 1px solid;
-  padding: 0px 10px;
+  /* border: 1px solid; */
+  /* padding: 0px 10px; */
   display: inline-block;
   line-height: 23px;
   /* font-weight: 500; */ 
-  min-width: 81px;
+  min-width: 60px;
   text-align: center;
   font-family: var(--font1);
+}
+.room-bottom-img{
+  position: absolute;
+  right: 0;
+  width: 400px;
+  top: calc(100% - 60px);
 }
 .full-banner *{
   font-family: var(--font1);
@@ -803,9 +809,10 @@ footer a {
   padding-right: 4px;
 }
 .submit-btn {
-  background-color: #442220;
+  /* background-color: #442220; */
+  background-color: #f9b730;
   border: none;
-  padding: 5px 17px;
+  padding: 5px 20px;
   outline: none;
   color: #FDEFEF;
   font-weight: 500;

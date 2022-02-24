@@ -4,6 +4,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import {roomsData} from '../components/RoomsData'
+import bottomImg from '../images/rooms_img.png'
 
 const rooms = () => {
 
@@ -54,6 +55,9 @@ const rooms = () => {
                                 }
                             </div>
                         </div>
+                    </div>
+                    <div className="room-bottom-img">
+                        <img src={bottomImg} alt=""/>
                     </div>
                 </div>
             </Layout>
