@@ -18,7 +18,7 @@ const RetreatDetail = (props) => {
     
     let bgColor = "#f5f9e4"
     if(props.retreatName === "a-la-carte"){
-        bgColor = "#ffefd9";
+        bgColor = "#FDEDED";
     }
     return (
         <>
