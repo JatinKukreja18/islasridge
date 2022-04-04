@@ -30,10 +30,11 @@ const Layout = ({ location, isHomepage, children, navigation }) => {
       }}
       >
         <Header isHomepage={isHomepage} navigation={navigation} />
-    
-        <TransitionViews>
-            {children}
-        </TransitionViews>
+        <main className="mainView">
+          <TransitionViews>
+              {children}
+          </TransitionViews>
+        </main>
         <Footer />
     </TransitionProvider>
   );

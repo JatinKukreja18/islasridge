@@ -49,6 +49,10 @@ h1 {
   /* letter-spacing : 1.14; */
   margin-bottom: 1rem;
 }
+h1.simpler{
+  font-size: 32px;
+  line-height: 1.2;
+}
 h2, h2 a {
   margin-bottom: 1rem;
   color: #484d52;
@@ -65,8 +69,12 @@ h3, h3 a {
   letter-spacing : 0.52;
   line-height: 34px;
 }
+h3{
+  font-weight: 500;
+}
 p {
   margin-bottom: 2rem;
+  font-weight: 500;
 }
 pre, ul {
   margin-bottom: 20px;

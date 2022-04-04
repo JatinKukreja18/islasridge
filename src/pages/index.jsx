@@ -4,7 +4,7 @@ import SEO from '../components/SEO'
 // import HomepageBanner from '../components/HomepageBanner'
 // import SplashBanner from '../components/SplashBanner'
 // import MainContent from '../components/MainContent'
-
+import { graphql } from 'gatsby'
 import './../styles/reset.css';
 import './../styles/common.css';
 import './../styles/style.css';
