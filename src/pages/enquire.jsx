@@ -10,7 +10,7 @@ const contactSelect = [
         title: "Room",
         name: "room",
         options: [
-            "INDOIO",
+            "INDIGO",
             "MANGO",
             "SAGE",
             "CHUNNA",
@@ -140,7 +140,7 @@ const Enquire = () => {
                     title="Contact Us"
                     description="Learn more about us who we are and what we do."
                 />
-                <div className="container space-for-header">
+                <div className="container space-for-header full-vh">
                     {/* <svg width="12" height="9" viewBox="0 0 15 9" xmlns="http://www.w3.org/2000/svg"> 
                         <path d="m13.5 0-6 5.953L1.5 0 0 1.5 7.5 9 15 1.5z" fill="black" fillRule="evenodd"></path>
                     </svg> */}

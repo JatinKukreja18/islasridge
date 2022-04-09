@@ -37,8 +37,10 @@ const RetreatDetail = (props) => {
                                 title= {`${filterPageData.breadcrumbTitle}`}
                                 description="Learn more about us who we are and what we do."
                             />
-                            <div className="container space-for-header">
-                                <div className="breadcrumb padding-b-5">
+                            {/* {console.log(pageData)} */}
+                            <div className={`container space-for-header ${props.retreatName}`}>
+                                <div className="m-heading text-center retreat-title">{filterPageData.breadcrumbTitle}</div>
+                                <div className="breadcrumb padding-b-5 m-hidden">
                                     <Link to="/retreats/">Retreats</Link>
                                     <span className="seprator"> / </span>
                                     <span className="added">{filterPageData.breadcrumbTitle}</span>
@@ -47,14 +49,16 @@ const RetreatDetail = (props) => {
                                     filterPageData.listRetreats.map((data, index) =>{
                                         return(
                                             <div className="retreat-main" key={index}>
-                                                <div>
-                                                    <img className="full-width left-img img-cover" src={data.image} height="540" alt="" />
+                                                <div className='aspect-image-wrapper'>
+                                                    <div className='aspect-image'>
+                                                        <img className="full-width left-img img-cover" src={data.image} height="540" alt="" />
+                                                    </div>
                                                 </div>
                                                 <div className="flex align-v-center retreat-heading-main">
                                                     <div className="">
                                                         <div className="flex align-v-center retreat-heading">
-                                                            <img className="" src={kiteImg} alt="" />
-                                                            <h5 className="retrea-title padding-left-20">{data.heading}</h5>
+                                                            {/* <img className="" src={kiteImg} alt="" /> */}
+                                                            <h5 className="retreat-title">{data.heading}</h5>
                                                         </div>
                                                         <p className="margin-b-0 retrea-desc">{data.description}</p>
                                                         <Link className="more-retreat" to="/enquire/">

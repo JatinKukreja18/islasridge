@@ -25,7 +25,7 @@ body{
   box-sizing: border-box;
 }
 .about-container *,.press-main * {
-  color: #f7ede9;
+  color: #eedfdc;
 }
 .container{
   max-width: 1300px;
@@ -91,7 +91,7 @@ body{
 .site-header,
 .site-header a {
   color: #484d52;
-  font-weight: 500;
+  font-weight: 600;
 }
 .main-navigation a{
   font-family: var(--font2);
@@ -446,9 +446,11 @@ footer p {
   padding: 2rem 0;
   margin-bottom: 0;
 }
-footer a {
+footer * {
   /* font-weight: bold; */
   text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
 }
 .footer-logo {
   width: 30px;
@@ -634,6 +636,7 @@ footer a {
   width: 70vh;
   max-width: 650px;
   line-height: 1;
+  z-index: -999;
 }
 .full-banner *{
   font-family: var(--font1);
@@ -656,12 +659,29 @@ footer a {
   grid-gap: 0px 60px;
   padding-bottom: 60px;  
 }
+.retreat-heading-main{
+  padding-top: 5px;
+}
+.retreat-main .aspect-image{
+  padding-top: 116.66%;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+.retreat-main .aspect-image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .retrea-desc{
   padding: 30px 0px;
   font-size: 17px;
   font-weight: 500;
 }
-.retrea-title{
+.retreat-title{
   font-size: 42px;
 }
 
@@ -795,7 +815,8 @@ footer,.site-header{
 }
 .breadcrumb, .breadcrumb * {
   color: #FEBB21;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 600;
 }
 .seprator{
   padding: 0px 4px;
@@ -908,7 +929,7 @@ body::-webkit-scrollbar-thumb{
 .accor-main {
   border-top: 1px solid;
   margin-bottom: 20px;
-  padding: 10px 5px;
+  padding: 12px 5px 22px 5px;
   border-bottom: 1px solid;
   /* margin-top: 100px; */
 }
@@ -941,9 +962,14 @@ body::-webkit-scrollbar-thumb{
   font-family: var(--font1);
   line-height: 1.2;
 }
-
+.accor-heading{
+  line-height: 1;
+}
 .main-view{
   /* height: 100vh; */
+}
+.contact-main{
+  padding-top: 40px;
 }
 /* Media Queries */
 /* @media (min-width: 1610px) {
@@ -973,7 +999,9 @@ body::-webkit-scrollbar-thumb{
   }
 }
 @media (max-width: 1023px) {
-  
+  .form-container{
+    padding-left: 20px;
+  } 
   .site-header nav li {
     /* display: inline-block; */
     margin-right: 24px;
@@ -1005,34 +1033,9 @@ body::-webkit-scrollbar-thumb{
 }
 
 
-@media(max-width:885px){
-  .map{
-    width: 40%;
-  }
-  .form-container{
-    width: 60%;
-    padding-left: 50px;
-  }
-}
 
-@media(max-width:700px){
-  .contact-main{
-    flex-direction: column;
-  }
-  .map{
-    order: 2;
-  }
-  .form-container, .map{
-    width: 100%;
-    padding: 0px;
-  }
-  .form-container{
-    padding-bottom: 20px;
-  }
-  .center-form{
-    margin-right: 40px;
-  } 
-}
+
+
 @media(max-width:740px){
   .site-header nav li{
     margin-right: 28px;    
@@ -1057,28 +1060,50 @@ body::-webkit-scrollbar-thumb{
     /* margin-top: 0px; */
   }
 }
-@media (max-width: 860px){
-  .retrea-title{
-    font-size: 30px;
+
+@media (max-width: 767px) {
+  .a-la-carte .retreat-heading{
+    display: none;
   }
   .retreat-main{
-    grid-gap: 0px 30px;    
+    flex-direction: column;
+    display: flex;
   }
-  .retreat-heading > img{
-    width: 20px;
+  .retreat-main .aspect-image-wrapper{
+    max-width: 400px;
+    margin: auto;
+    width: 100%;
   }
-  .retreat-heading-main{
-    padding: 20px 0px;    
+  .contact-main{
+    flex-direction: column;
   }
-  .retreats-box{
-    padding: 20px 30px;
+  .map{
+    order: 2;
+    margin: auto;
+    margin-top: 40px;
+    width: 40%;    
+    min-width: 200px;
   }
-  .retreats-title{
-    text-align: center;
-    font-size: 34px;
+  .form-container{
+    width: 100%;
+    padding: 0px;
+    max-width: 500px;
   }
-}
-@media (max-width: 767px) {
+  .form-container{
+    padding-bottom: 20px;
+  }
+  .center-form{
+    margin-right: 40px;
+  } 
+  
+  /* .form-container{
+    width: 60%;
+    padding-left: 50px;
+  } */
+  footer{ 
+    display: flex;
+    justify-content: center
+  }
   h1 {
     font-size: 32px;
     line-height: 40px;
@@ -1257,12 +1282,13 @@ body::-webkit-scrollbar-thumb{
     grid-gap: 40px;    
   }
   .m-heading {
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 500;
   }
   .room-main, .room-main .room-box{
     border: none; 
   }
-  .room-shape:before,.room-shape{
+  .room-shape:before,.room-shape,.m-hidden{
     display: none;
   }
   .room-container{
@@ -1309,5 +1335,32 @@ body::-webkit-scrollbar-thumb{
     font-size: 14px;
     line-height: 1.3;
   }
-  
+  .retreat-title{
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .retreat-heading .retreat-title{
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-size: 30px;
+  }
+  .retreat-main{
+    grid-gap: 0px 30px;    
+  }
+  .retreat-heading > img{
+    width: 20px;
+  }
+  .retreat-heading-main{
+    padding: 0px 0px;    
+  }
+  .retreats-box{
+    padding: 20px 30px;
+  }
+  .retreats-title{
+    text-align: center;
+    font-size: 34px;
+  }
+  .firstbox-3-room{
+    display: none;
+  }
 }

@@ -22,7 +22,7 @@ export const retreatsData = [
     },
     {
         title: "Table d’hote",
-        code: "table-dhote",
+        code: "table-d-hote",
         description: "Select from our offered range of retreat options. From yoga to cooking and gardening, each retreat is designed to learn, immerse and listen.",
         nextPageData: {
             breadcrumbTitle: "Table d’hote",

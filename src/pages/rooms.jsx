@@ -37,7 +37,7 @@ const rooms = () => {
                                         }
                                     })
                                 }
-                                <div className="room-box"></div>
+                                <div className="room-box firstbox-3-room"></div>
                             </div>
                         </div>
 
