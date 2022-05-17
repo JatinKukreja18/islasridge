@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Search from './Search'
+import SearchResults from './SearchResults'
 import Overlay from './Overlay'
 
 const Header = ({ isHomepage }) => {
   const [hamMenus, setHamMenus] = useState(false)
+  const [searchedString, setSearchedString] = useState('');
+  const [forcedString, setForcedString] = useState('')
   const openHamMenus = () =>{
     setHamMenus(!hamMenus)
   }
-
+  const onSearchChange = (val)=>{
+    console.log(searchedString);
+    setSearchedString(val)
+    setForcedString('');
+  }
+  const resetSearch = (val)=>{
+    setForcedString(val)
+    setSearchedString('')
+  }
   const headerMenus = [
     {
       title: "Home",
@@ -60,8 +71,12 @@ const Header = ({ isHomepage }) => {
           <li><Link activeClassName="active-menu" to="/press">Press</Link></li>
           <li><Link activeClassName="active-menu" to="/enquire">Enquire</Link></li> */}
         </ul>
-
-        <Search />
+          <div className="search-container">
+            <Search onSearchChange={onSearchChange} forcedString={forcedString}/>
+            <div className="search-results">
+              <SearchResults searchedString={searchedString} closeResults={resetSearch}/>
+            </div>
+          </div>
       </nav>
       <div className={`ham-menus relative ${hamMenus ? "ham-cross" : ""}`} onClick={openHamMenus} aria-hidden="true">
         <div className="ham-menus-lines"></div>

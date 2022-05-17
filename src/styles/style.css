@@ -1005,6 +1005,56 @@ body::-webkit-scrollbar-thumb{
     grid-gap: 40px 40px;
   }
 } */
+.search-container{
+  position: relative;
+}
+.search-results{
+  position: absolute;
+  top: calc(100% + 20px);
+  right: 0;
+  min-width: 180px;
+}
+.search-results-inner{
+  background-color: #f5f9e5;
+  border: 1px solid #b8bbab;
+  padding: 10px;
+}
+nav .search-results-inner  ul {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.search-results-inner p,
+.search-results-inner label,
+.search-results-inner ul li{
+  color: #6D6A49;
+  font-size: 14px;
+  width: 100%;
+}
+.search-results-inner p{
+  margin: 0;
+  text-align: center;
+}
+.search-results-inner label{
+  margin-bottom: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.search-results-inner ul li{
+  text-transform: capitalize;
+}
+/* .search-results-inner ul li span */
+.search-results-inner ul li a{
+  cursor: pointer;
+  color: #6D6A49;
+  padding: 0;
+  width: 100%;
+  display: inline-block;
+}
+.search-results-inner ul li:hover{
+  color: #FEBB21;
+}
 @media (max-width: 1280px) {
   .press-content-box{
     padding-bottom: 20px;
@@ -1057,6 +1107,15 @@ body::-webkit-scrollbar-thumb{
 
 @media(min-width:768px){
   .ham-menus,.overlay,.m-heading{display: none;} 
+  .result-backdrop{
+    position: fixed;
+    top: 60px;
+    z-index: -1;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 
@@ -1067,6 +1126,7 @@ body::-webkit-scrollbar-thumb{
   .site-header nav li{
     margin-right: 28px;    
   }
+  
 }
 @media(max-width:1150px){
   .banner-content{
@@ -1218,9 +1278,24 @@ body::-webkit-scrollbar-thumb{
     padding: 10px 0px;
     display: block;
   }
-  #nav ul{
+  #nav > ul{
     flex-direction: column;
     margin-top: 28px;
+  }
+  #nav .search-results-inner ul li a{
+   padding: 5px 0;
+   text-align: left;
+   margin-bottom: 10px; 
+  }
+  .search-results{
+    left: 0;
+  }
+  .search-results-inner {
+    background-color: #f5f9e5;
+    border: 1px solid #b8bbab;
+    padding: 10px;
+    width: 300px;
+    transform: translateX(-68px);
   }
   .site-header nav li{
     margin-right: 0px;
