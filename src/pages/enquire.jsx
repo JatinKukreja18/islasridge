@@ -372,7 +372,7 @@ const Enquire = () => {
                 </div>
 
                 <button className="submit-btn white pointer" type="submit">
-                  {textLoading ? "SENDING" : "SEND"}
+                  <span>{textLoading ? "SENDING" : "SEND"}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 76.77 38.8"

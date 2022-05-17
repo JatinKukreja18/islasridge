@@ -7,6 +7,7 @@ function Search({onSearchChange,forcedString}) {
         setLocalSearchValue(value);
         onSearchChange(value);
     }
+    // if(forcedString.length){}
     return (
         <div className="flex align-v-center search-main">
             <input className="search-input" type="text" value={forcedString?forcedString:localSearchValue} onChange={e=>onLocalSearchChange(e.target.value)}/>
